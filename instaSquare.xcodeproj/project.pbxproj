@@ -24,6 +24,8 @@
 		AF8DBA281814F0EF00B2C0E1 /* ISStubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */; };
 		AF8DBA291814F0EF00B2C0E1 /* ISStubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */; };
 		B0D7827E76FD4FD9A1A23A0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 502D007E40FA4670B7777D84 /* libPods.a */; };
+		F8CC45651817B02F00E19FAF /* ISFoursquareClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC45641817B02F00E19FAF /* ISFoursquareClient.m */; };
+		F8CC45681817B6E700E19FAF /* ISCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC45671817B6E700E19FAF /* ISCheckin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		AF8DBA251814F0EF00B2C0E1 /* ISStubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStubViewController.h; sourceTree = "<group>"; };
 		AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStubViewController.m; sourceTree = "<group>"; };
 		AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISStubViewController.xib; sourceTree = "<group>"; };
+		F8CC45631817B02F00E19FAF /* ISFoursquareClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFoursquareClient.h; sourceTree = "<group>"; };
+		F8CC45641817B02F00E19FAF /* ISFoursquareClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFoursquareClient.m; sourceTree = "<group>"; };
+		F8CC45661817B6E700E19FAF /* ISCheckin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCheckin.h; sourceTree = "<group>"; };
+		F8CC45671817B6E700E19FAF /* ISCheckin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCheckin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,8 @@
 			children = (
 				AF8DBA1D1814DC0600B2C0E1 /* ISInstagramClient.h */,
 				AF8DBA1E1814DC0600B2C0E1 /* ISInstagramClient.m */,
+				F8CC45631817B02F00E19FAF /* ISFoursquareClient.h */,
+				F8CC45641817B02F00E19FAF /* ISFoursquareClient.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -178,6 +186,8 @@
 			children = (
 				AF8DBA211814DD3200B2C0E1 /* ISImage.h */,
 				AF8DBA221814DD3200B2C0E1 /* ISImage.m */,
+				F8CC45661817B6E700E19FAF /* ISCheckin.h */,
+				F8CC45671817B6E700E19FAF /* ISCheckin.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,9 +336,11 @@
 			files = (
 				AF8DBA1F1814DC0600B2C0E1 /* ISInstagramClient.m in Sources */,
 				AF8DBA281814F0EF00B2C0E1 /* ISStubViewController.m in Sources */,
+				F8CC45681817B6E700E19FAF /* ISCheckin.m in Sources */,
 				AF8DB9AA180F822E00B2C0E1 /* ISAppDelegate.m in Sources */,
 				AF8DB9A6180F822E00B2C0E1 /* main.m in Sources */,
 				AF8DBA231814DD3200B2C0E1 /* ISImage.m in Sources */,
+				F8CC45651817B02F00E19FAF /* ISFoursquareClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
