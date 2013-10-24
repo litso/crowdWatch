@@ -8,6 +8,7 @@
 
 #import "ISStubViewController.h"
 #import "ISInstagramClient.h"
+#import "ISFoursquareClient.h"
 
 @interface ISStubViewController ()
 
@@ -27,6 +28,28 @@
         } failure:^(NSError * error) {
             NSLog(@"problems...");
         }];
+//        ISFoursquareClient *client = [ISFoursquareClient sharedFSClient];
+        [[ISFoursquareClient sharedFSClient] checkinsAtLatitude:37.384242
+                                                 andLongitude:-122.031973
+                                                  withSuccess:^(AFHTTPRequestOperation *operation, id response) {
+                                                      NSLog(@"%@", response);
+                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                                                                      message:@"Fetched Checkins"
+                                                                                                     delegate:nil
+                                                                                            cancelButtonTitle:nil
+                                                                                            otherButtonTitles:nil];
+                                                      [alert show];
+                                                      [alert dismissWithClickedButtonIndex:0 animated:YES];
+                                                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                                      NSLog(@"%@", error);
+                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                      message:[error localizedDescription]
+                                                                                                     delegate:nil
+                                                                                            cancelButtonTitle:@"OK"
+                                                                                            otherButtonTitles:nil];
+                                                      [alert show];
+                                                  }
+         ];
     }
     return self;
 }
