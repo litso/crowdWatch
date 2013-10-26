@@ -30,6 +30,7 @@
     
     if (self) {
         [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+        [self setDefaultHeader:@"Accept" value:@"application/json"];
     }
     return self;
 }
@@ -47,7 +48,16 @@
                                                     @"client_secret":FOURSQUARE_CLIENT_SECRET
                                                     }
      ];
-    [self getPath:@"venues/trending" parameters:params success:success failure:failure];
+    [self getPath:@"venues/trending"
+       parameters:params
+          success:^(AFHTTPRequestOperation *operation, id response) {
+              //NSLog(@"%@",response);
+              NSDictionary *responseDictionary = [response objectForKey:@"response"];
+              NSArray *venuesArray = [responseDictionary objectForKey:@"venues"];
+              success(operation, venuesArray);
+          }
+          failure:failure
+     ];
 }
 
 @end
