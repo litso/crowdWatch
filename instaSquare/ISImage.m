@@ -10,8 +10,6 @@
 
 @interface ISImage()
 
-@property(nonatomic, strong) NSString* url;
-
 @end
 
 @implementation ISImage
@@ -45,7 +43,6 @@
             }
         }
         NSString* url = jsonImage[@"images"][@"low_resolution"][@"url"];
-        
         NSString* caption = nil;
         
         if (jsonImage[@"caption"] && jsonImage[@"caption"][@"text"])
@@ -59,14 +56,15 @@
         {
             image.caption = caption;
         }
+        
+        NSString *created = jsonImage[@"created_time"];
+        image.dateCreated = [NSDate dateWithTimeIntervalSince1970: (NSTimeInterval)[created intValue]];
+
+        image.latitude = [jsonImage[@"location"][@"latitude"] doubleValue];
+        image.longitude = [jsonImage[@"location"][@"longitude"] doubleValue];
+        
         [array addObject:image];
     }
     return array;
-}
-
-- (UIImage *)image {
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:self.url]];
-    UIImage *myImage = [UIImage imageWithData:data];
-    return myImage;
 }
 @end

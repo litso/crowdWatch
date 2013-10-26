@@ -10,8 +10,12 @@
 
 @interface ISImage : NSObject
 
-@property (nonatomic, readonly) UIImage* image;
+@property(nonatomic, strong) NSString* url;
 @property (nonatomic, strong) NSString* caption;
+@property (nonatomic, strong) NSDate* dateCreated;
+@property (atomic, assign) double latitude;
+@property (atomic, assign) double longitude;
+
 
 + (NSArray*) imagesFromArray: (NSArray*) dictionaries;
 

@@ -21,10 +21,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        //    ISInstagramClient * client = [ISInstagramClient sharedClient];
-        [[ISInstagramClient sharedClient] imagesAtLatitude:48.858844
-                                              andLongitude:2.294351
-                                               withSuccess:^(NSArray * images) {
+        ISInstagramClient * client = [ISInstagramClient sharedClient];
+        [client imagesAtLatitude:48.858844
+                    andLongitude:2.294351
+                     withSuccess:^(NSArray * images) {
             NSLog(@"Fetched Images");
         } failure:^(NSError * error) {
             NSLog(@"problems...");
