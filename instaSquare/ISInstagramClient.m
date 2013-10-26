@@ -32,6 +32,7 @@ NSInteger kInstagramResponseOk = 200;
     
     if (self) {
         [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+        [self setDefaultHeader:@"Accept" value:@"application/json"];
     }
     return self;
 }
@@ -43,20 +44,8 @@ NSInteger kInstagramResponseOk = 200;
                     @"lat": [NSString stringWithFormat: @"%f", latitude],
                     @"lng": [NSString stringWithFormat: @"%f", longitude]
                     }
-          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+          success:^(AFHTTPRequestOperation *operation, id json) {
               
-            // TODO: Why is this manual, shouldn't AFNetworking do this for me?
-            NSError* error;
-            NSDictionary* json = [NSJSONSerialization
-                                JSONObjectWithData:responseObject
-                                options:kNilOptions 
-                                error:&error];
-
-            if (error && failure)
-            {
-                failure(error);
-            }
-            
             if ([self responseCodeFromJson: json] == kInstagramResponseOk)
             {
                 NSArray *rawImages = [json objectForKey:@"data"];
