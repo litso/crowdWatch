@@ -9,6 +9,7 @@
 #import "ISStubViewController.h"
 #import "ISInstagramClient.h"
 #import "ISFoursquareClient.h"
+#import "ISCheckin.h"
 
 @interface ISStubViewController ()
 
@@ -28,18 +29,20 @@
         } failure:^(NSError * error) {
             NSLog(@"problems...");
         }];
-//        ISFoursquareClient *client = [ISFoursquareClient sharedFSClient];
-        [[ISFoursquareClient sharedFSClient] checkinsAtLatitude:37.384242
-                                                 andLongitude:-122.031973
+        [[ISFoursquareClient sharedFSClient] checkinsAtLatitude:37.786827
+                                                 andLongitude:-122.404653
                                                   withSuccess:^(AFHTTPRequestOperation *operation, id response) {
-                                                      NSLog(@"%@", response);
-                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
-                                                                                                      message:@"Fetched Checkins"
-                                                                                                     delegate:nil
-                                                                                            cancelButtonTitle:nil
-                                                                                            otherButtonTitles:nil];
-                                                      [alert show];
-                                                      [alert dismissWithClickedButtonIndex:0 animated:YES];
+                                                      NSLog(@"Fetched Trending Venues Nearby");
+                                                      NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
+                                                      NSLog(@"%@", checkins);
+//                                                      NSLog(@"%@", response);
+//                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+//                                                                                                      message:@"Fetched Checkins"
+//                                                                                                     delegate:nil
+//                                                                                            cancelButtonTitle:nil
+//                                                                                            otherButtonTitles:nil];
+//                                                      [alert show];
+//                                                      [alert dismissWithClickedButtonIndex:0 animated:YES];
                                                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                       NSLog(@"%@", error);
                                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"

@@ -9,14 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface ISCheckin : NSObject
-{
-    CGFloat *locationLat;
-    CGFloat *locationLng;
-    NSUInteger *locationCheckins;
-}
 
-@property (nonatomic, strong) NSString *locationId;
-@property (nonatomic, strong) NSString *locationName;
+@property (nonatomic, strong) NSString *venueId;
+@property (nonatomic, strong) NSString *venueName;
+@property (nonatomic, strong) NSNumber *venueCheckins;
+@property (nonatomic, strong) NSDecimalNumber *venueLatitude;
+@property (nonatomic, strong) NSDecimalNumber *venueLongitude;
 
-
++ (NSMutableArray *)checkinsWithArray:(NSArray *)array;
+    
 @end
