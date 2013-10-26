@@ -34,7 +34,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-10-17 01:55:36 +0000</string>
+	<string>2013-10-24 03:18:56 +0000</string>
 	<key>Modifier</key>
 	<string>Robert Manson</string>
 	<key>NotesVisible</key>
@@ -464,7 +464,7 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{77.5, 273}, {229, 20}}</string>
+					<string>{{149, 273}, {86, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -510,7 +510,7 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs32 \cf0 UC Hastings College of the Law}</string>
+\f0\fs32 \cf0 10 checkins}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -897,48 +897,48 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 								aUkBBJKEhIQM
 								TlNEaWN0aW9u
 								YXJ5AJSEAWkE
-								koSWlhBOU1Bh
-								cmFncmFwaFN0
-								eWxlhpKEhIQQ
-								TlNQYXJhZ3Jh
-								cGhTdHlsZQCU
-								hARDQ0BTAQCE
-								hIQHTlNBcnJh
-								eQCUmQyShISE
-								CU5TVGV4dFRh
-								YgCUhAJDZgAc
-								hpKEn54AOIaS
-								hJ+eAFSGkoSf
-								ngBwhpKEn54A
-								gYwAhpKEn54A
-								gagAhpKEn54A
-								gcQAhpKEn54A
-								geAAhpKEn54A
-								gfwAhpKEn54A
-								gRgBhpKEn54A
-								gTQBhpKEn54A
-								gVABhoaBAAiE
-								BFsxZl2DzcxM
-								PYaShJaWB05T
-								Q29sb3KGkoSE
-								hAdOU0NvbG9y
-								AJSEAWMDhAJm
-								ZgCDmpkZP4aS
-								hJaWBk5TRm9u
-								dIaShISEBk5T
-								Rm9udB6UmSSE
-								BVszNmNdBgAA
-								ABwAAAD//kgA
-								ZQBsAHYAZQB0
-								AGkAYwBhAE4A
-								ZQB1AGUAhAFm
-								DaEAoQGhAKEA
-								hpKElpYGTlNL
-								ZXJuhpKEhIQI
-								TlNOdW1iZXIA
-								hIQHTlNWYWx1
-								ZQCUhAEqhIQB
-								ZKkAhoaG
+								koSWlgZOU0tl
+								cm6GkoSEhAhO
+								U051bWJlcgCE
+								hAdOU1ZhbHVl
+								AJSEASqEhAFk
+								nQCGkoSWlhBO
+								U1BhcmFncmFw
+								aFN0eWxlhpKE
+								hIQQTlNQYXJh
+								Z3JhcGhTdHls
+								ZQCUhARDQ0BT
+								AQCEhIQHTlNB
+								cnJheQCUmQyS
+								hISECU5TVGV4
+								dFRhYgCUhAJD
+								ZgAchpKEpKIA
+								OIaShKSiAFSG
+								koSkogBwhpKE
+								pKIAgYwAhpKE
+								pKIAgagAhpKE
+								pKIAgcQAhpKE
+								pKIAgeAAhpKE
+								pKIAgfwAhpKE
+								pKIAgRgBhpKE
+								pKIAgTQBhpKE
+								pKIAgVABhoaB
+								AAiEBFsxZl2D
+								zcxMPYaShJaW
+								Bk5TRm9udIaS
+								hISEBk5TRm9u
+								dB6UmSSEBVsz
+								NmNdBgAAABwA
+								AAD//kgAZQBs
+								AHYAZQB0AGkA
+								YwBhAE4AZQB1
+								AGUAhAFmDYQB
+								YwCnAacApwCG
+								koSWlgdOU0Nv
+								bG9yhpKEhIQH
+								TlNDb2xvcgCU
+								pwOEAmZmAIOa
+								mRk/hoaG
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -1085,48 +1085,48 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 								hAJpSQEFkoSE
 								hAxOU0RpY3Rp
 								b25hcnkAlIQB
-								aQSShJaWEE5T
-								UGFyYWdyYXBo
-								U3R5bGWGkoSE
-								hBBOU1BhcmFn
-								cmFwaFN0eWxl
-								AJSEBENDQFMA
-								AISEhAdOU0Fy
-								cmF5AJSZDJKE
-								hIQJTlNUZXh0
-								VGFiAJSEAkNm
-								AByGkoSfngA4
-								hpKEn54AVIaS
-								hJ+eAHCGkoSf
-								ngCBjACGkoSf
-								ngCBqACGkoSf
-								ngCBxACGkoSf
-								ngCB4ACGkoSf
-								ngCB/ACGkoSf
-								ngCBGAGGkoSf
-								ngCBNAGGkoSf
-								ngCBUAGGhoEA
-								CIQEWzFmXYPN
-								zEw9hpKElpYH
-								TlNDb2xvcoaS
-								hISEB05TQ29s
-								b3IAlIQBYwOE
-								AmZmAIOamRk/
-								hpKElpYGTlNG
-								b250hpKEhIQG
-								TlNGb250HpSZ
-								JIQFWzM2Y10G
-								AAAAGgAAAP/+
-								TAB1AGMAaQBk
-								AGEARwByAGEA
-								bgBkAGUAAACE
-								AWYNoQChAaEA
-								oQCGkoSWlgZO
-								U0tlcm6GkoSE
-								hAhOU051bWJl
-								cgCEhAdOU1Zh
-								bHVlAJSEASqE
-								hAFkqQCGhoY=
+								aQSShJaWBk5T
+								S2VyboaShISE
+								CE5TTnVtYmVy
+								AISEB05TVmFs
+								dWUAlIQBKoSE
+								AWSdAIaShJaW
+								EE5TUGFyYWdy
+								YXBoU3R5bGWG
+								koSEhBBOU1Bh
+								cmFncmFwaFN0
+								eWxlAJSEBEND
+								QFMAAISEhAdO
+								U0FycmF5AJSZ
+								DJKEhIQJTlNU
+								ZXh0VGFiAJSE
+								AkNmAByGkoSk
+								ogA4hpKEpKIA
+								VIaShKSiAHCG
+								koSkogCBjACG
+								koSkogCBqACG
+								koSkogCBxACG
+								koSkogCB4ACG
+								koSkogCB/ACG
+								koSkogCBGAGG
+								koSkogCBNAGG
+								koSkogCBUAGG
+								hoEACIQEWzFm
+								XYPNzEw9hpKE
+								lpYGTlNGb250
+								hpKEhIQGTlNG
+								b250HpSZJIQF
+								WzM2Y10GAAAA
+								GgAAAP/+TAB1
+								AGMAaQBkAGEA
+								RwByAGEAbgBk
+								AGUAAACEAWYN
+								hAFjAKcBpwCn
+								AIaShJaWB05T
+								Q29sb3KGkoSE
+								hAdOU0NvbG9y
+								AJSnA4QCZmYA
+								g5qZGT+GhoY=
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -1270,50 +1270,50 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 								hoQCaUkBB5KE
 								hIQMTlNEaWN0
 								aW9uYXJ5AJSE
-								AWkEkoSWlhBO
-								U1BhcmFncmFw
-								aFN0eWxlhpKE
-								hIQQTlNQYXJh
-								Z3JhcGhTdHls
-								ZQCUhARDQ0BT
-								AgCEhIQHTlNB
-								cnJheQCUmQyS
-								hISECU5TVGV4
-								dFRhYgCUhAJD
-								ZgAchpKEn54A
-								OIaShJ+eAFSG
-								koSfngBwhpKE
-								n54AgYwAhpKE
-								n54AgagAhpKE
-								n54AgcQAhpKE
-								n54AgeAAhpKE
-								n54AgfwAhpKE
-								n54AgRgBhpKE
-								n54AgTQBhpKE
-								n54AgVABhoaB
-								AAiEBFsxZl2D
-								zcxMPYaShJaW
-								B05TQ29sb3KG
-								koSEhAdOU0Nv
-								bG9yAJSEAWMD
-								hAJmZgCDmpkZ
-								P4aShJaWBk5T
-								Rm9udIaShISE
-								Bk5TRm9udB6U
-								mTSEBVs1MmNd
-								BgAAACoAAAD/
-								/kgAZQBsAHYA
-								ZQB0AGkAYwBh
-								AE4AZQB1AGUA
-								LQBNAGUAZABp
-								AHUAbQAAAIQB
-								Zg2hAKEBoQCh
-								AIaShJaWBk5T
-								S2VyboaShISE
-								CE5TTnVtYmVy
-								AISEB05TVmFs
-								dWUAlIQBKoSE
-								AWSpAIaGhg==
+								AWkEkoSWlgZO
+								U0tlcm6GkoSE
+								hAhOU051bWJl
+								cgCEhAdOU1Zh
+								bHVlAJSEASqE
+								hAFknQCGkoSW
+								lhBOU1BhcmFn
+								cmFwaFN0eWxl
+								hpKEhIQQTlNQ
+								YXJhZ3JhcGhT
+								dHlsZQCUhARD
+								Q0BTAgCEhIQH
+								TlNBcnJheQCU
+								mQyShISECU5T
+								VGV4dFRhYgCU
+								hAJDZgAchpKE
+								pKIAOIaShKSi
+								AFSGkoSkogBw
+								hpKEpKIAgYwA
+								hpKEpKIAgagA
+								hpKEpKIAgcQA
+								hpKEpKIAgeAA
+								hpKEpKIAgfwA
+								hpKEpKIAgRgB
+								hpKEpKIAgTQB
+								hpKEpKIAgVAB
+								hoaBAAiEBFsx
+								Zl2DzcxMPYaS
+								hJaWBk5TRm9u
+								dIaShISEBk5T
+								Rm9udB6UmTSE
+								BVs1MmNdBgAA
+								ACoAAAD//kgA
+								ZQBsAHYAZQB0
+								AGkAYwBhAE4A
+								ZQB1AGUALQBN
+								AGUAZABpAHUA
+								bQAAAIQBZg2E
+								AWMApwGnAKcA
+								hpKElpYHTlND
+								b2xvcoaShISE
+								B05TQ29sb3IA
+								lKcDhAJmZgCD
+								mpkZP4aGhg==
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -2186,48 +2186,48 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 								aUkBBJKEhIQM
 								TlNEaWN0aW9u
 								YXJ5AJSEAWkE
-								koSWlhBOU1Bh
-								cmFncmFwaFN0
-								eWxlhpKEhIQQ
-								TlNQYXJhZ3Jh
-								cGhTdHlsZQCU
-								hARDQ0BTAQCE
-								hIQHTlNBcnJh
-								eQCUmQyShISE
-								CU5TVGV4dFRh
-								YgCUhAJDZgAc
-								hpKEn54AOIaS
-								hJ+eAFSGkoSf
-								ngBwhpKEn54A
-								gYwAhpKEn54A
-								gagAhpKEn54A
-								gcQAhpKEn54A
-								geAAhpKEn54A
-								gfwAhpKEn54A
-								gRgBhpKEn54A
-								gTQBhpKEn54A
-								gVABhoaBAAiE
-								BFsxZl2DzcxM
-								PYaShJaWB05T
-								Q29sb3KGkoSE
-								hAdOU0NvbG9y
-								AJSEAWMDhAJm
-								ZgCDmpkZP4aS
-								hJaWBk5TRm9u
-								dIaShISEBk5T
-								Rm9udB6UmSSE
-								BVszNmNdBgAA
-								ABwAAAD//kgA
-								ZQBsAHYAZQB0
-								AGkAYwBhAE4A
-								ZQB1AGUAhAFm
-								DaEAoQGhAKEA
-								hpKElpYGTlNL
-								ZXJuhpKEhIQI
-								TlNOdW1iZXIA
-								hIQHTlNWYWx1
-								ZQCUhAEqhIQB
-								ZKkAhoaG
+								koSWlgZOU0tl
+								cm6GkoSEhAhO
+								U051bWJlcgCE
+								hAdOU1ZhbHVl
+								AJSEASqEhAFk
+								nQCGkoSWlhBO
+								U1BhcmFncmFw
+								aFN0eWxlhpKE
+								hIQQTlNQYXJh
+								Z3JhcGhTdHls
+								ZQCUhARDQ0BT
+								AQCEhIQHTlNB
+								cnJheQCUmQyS
+								hISECU5TVGV4
+								dFRhYgCUhAJD
+								ZgAchpKEpKIA
+								OIaShKSiAFSG
+								koSkogBwhpKE
+								pKIAgYwAhpKE
+								pKIAgagAhpKE
+								pKIAgcQAhpKE
+								pKIAgeAAhpKE
+								pKIAgfwAhpKE
+								pKIAgRgBhpKE
+								pKIAgTQBhpKE
+								pKIAgVABhoaB
+								AAiEBFsxZl2D
+								zcxMPYaShJaW
+								Bk5TRm9udIaS
+								hISEBk5TRm9u
+								dB6UmSSEBVsz
+								NmNdBgAAABwA
+								AAD//kgAZQBs
+								AHYAZQB0AGkA
+								YwBhAE4AZQB1
+								AGUAhAFmDYQB
+								YwCnAacApwCG
+								koSWlgdOU0Nv
+								bG9yhpKEhIQH
+								TlNDb2xvcgCU
+								pwOEAmZmAIOa
+								mRk/hoaG
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -2374,48 +2374,48 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 								hAJpSQEFkoSE
 								hAxOU0RpY3Rp
 								b25hcnkAlIQB
-								aQSShJaWEE5T
-								UGFyYWdyYXBo
-								U3R5bGWGkoSE
-								hBBOU1BhcmFn
-								cmFwaFN0eWxl
-								AJSEBENDQFMA
-								AISEhAdOU0Fy
-								cmF5AJSZDJKE
-								hIQJTlNUZXh0
-								VGFiAJSEAkNm
-								AByGkoSfngA4
-								hpKEn54AVIaS
-								hJ+eAHCGkoSf
-								ngCBjACGkoSf
-								ngCBqACGkoSf
-								ngCBxACGkoSf
-								ngCB4ACGkoSf
-								ngCB/ACGkoSf
-								ngCBGAGGkoSf
-								ngCBNAGGkoSf
-								ngCBUAGGhoEA
-								CIQEWzFmXYPN
-								zEw9hpKElpYH
-								TlNDb2xvcoaS
-								hISEB05TQ29s
-								b3IAlIQBYwOE
-								AmZmAIOamRk/
-								hpKElpYGTlNG
-								b250hpKEhIQG
-								TlNGb250HpSZ
-								JIQFWzM2Y10G
-								AAAAGgAAAP/+
-								TAB1AGMAaQBk
-								AGEARwByAGEA
-								bgBkAGUAAACE
-								AWYNoQChAaEA
-								oQCGkoSWlgZO
-								U0tlcm6GkoSE
-								hAhOU051bWJl
-								cgCEhAdOU1Zh
-								bHVlAJSEASqE
-								hAFkqQCGhoY=
+								aQSShJaWBk5T
+								S2VyboaShISE
+								CE5TTnVtYmVy
+								AISEB05TVmFs
+								dWUAlIQBKoSE
+								AWSdAIaShJaW
+								EE5TUGFyYWdy
+								YXBoU3R5bGWG
+								koSEhBBOU1Bh
+								cmFncmFwaFN0
+								eWxlAJSEBEND
+								QFMAAISEhAdO
+								U0FycmF5AJSZ
+								DJKEhIQJTlNU
+								ZXh0VGFiAJSE
+								AkNmAByGkoSk
+								ogA4hpKEpKIA
+								VIaShKSiAHCG
+								koSkogCBjACG
+								koSkogCBqACG
+								koSkogCBxACG
+								koSkogCB4ACG
+								koSkogCB/ACG
+								koSkogCBGAGG
+								koSkogCBNAGG
+								koSkogCBUAGG
+								hoEACIQEWzFm
+								XYPNzEw9hpKE
+								lpYGTlNGb250
+								hpKEhIQGTlNG
+								b250HpSZJIQF
+								WzM2Y10GAAAA
+								GgAAAP/+TAB1
+								AGMAaQBkAGEA
+								RwByAGEAbgBk
+								AGUAAACEAWYN
+								hAFjAKcBpwCn
+								AIaShJaWB05T
+								Q29sb3KGkoSE
+								hAdOU0NvbG9y
+								AJSnA4QCZmYA
+								g5qZGT+GhoY=
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -2632,50 +2632,50 @@ Readjusting the map  view port to either zoom in, zoom out, or pan results in th
 								hoQCaUkBB5KE
 								hIQMTlNEaWN0
 								aW9uYXJ5AJSE
-								AWkEkoSWlhBO
-								U1BhcmFncmFw
-								aFN0eWxlhpKE
-								hIQQTlNQYXJh
-								Z3JhcGhTdHls
-								ZQCUhARDQ0BT
-								AgCEhIQHTlNB
-								cnJheQCUmQyS
-								hISECU5TVGV4
-								dFRhYgCUhAJD
-								ZgAchpKEn54A
-								OIaShJ+eAFSG
-								koSfngBwhpKE
-								n54AgYwAhpKE
-								n54AgagAhpKE
-								n54AgcQAhpKE
-								n54AgeAAhpKE
-								n54AgfwAhpKE
-								n54AgRgBhpKE
-								n54AgTQBhpKE
-								n54AgVABhoaB
-								AAiEBFsxZl2D
-								zcxMPYaShJaW
-								B05TQ29sb3KG
-								koSEhAdOU0Nv
-								bG9yAJSEAWMD
-								hAJmZgCDmpkZ
-								P4aShJaWBk5T
-								Rm9udIaShISE
-								Bk5TRm9udB6U
-								mTSEBVs1MmNd
-								BgAAACoAAAD/
-								/kgAZQBsAHYA
-								ZQB0AGkAYwBh
-								AE4AZQB1AGUA
-								LQBNAGUAZABp
-								AHUAbQAAAIQB
-								Zg2hAKEBoQCh
-								AIaShJaWBk5T
-								S2VyboaShISE
-								CE5TTnVtYmVy
-								AISEB05TVmFs
-								dWUAlIQBKoSE
-								AWSpAIaGhg==
+								AWkEkoSWlgZO
+								U0tlcm6GkoSE
+								hAhOU051bWJl
+								cgCEhAdOU1Zh
+								bHVlAJSEASqE
+								hAFknQCGkoSW
+								lhBOU1BhcmFn
+								cmFwaFN0eWxl
+								hpKEhIQQTlNQ
+								YXJhZ3JhcGhT
+								dHlsZQCUhARD
+								Q0BTAgCEhIQH
+								TlNBcnJheQCU
+								mQyShISECU5T
+								VGV4dFRhYgCU
+								hAJDZgAchpKE
+								pKIAOIaShKSi
+								AFSGkoSkogBw
+								hpKEpKIAgYwA
+								hpKEpKIAgagA
+								hpKEpKIAgcQA
+								hpKEpKIAgeAA
+								hpKEpKIAgfwA
+								hpKEpKIAgRgB
+								hpKEpKIAgTQB
+								hpKEpKIAgVAB
+								hoaBAAiEBFsx
+								Zl2DzcxMPYaS
+								hJaWBk5TRm9u
+								dIaShISEBk5T
+								Rm9udB6UmTSE
+								BVs1MmNdBgAA
+								ACoAAAD//kgA
+								ZQBsAHYAZQB0
+								AGkAYwBhAE4A
+								ZQB1AGUALQBN
+								AGUAZABpAHUA
+								bQAAAIQBZg2E
+								AWMApwGnAKcA
+								hpKElpYHTlND
+								b2xvcoaShISE
+								B05TQ29sb3IA
+								lKcDhAJmZgCD
+								mpkZP4aGhg==
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -4861,48 +4861,48 @@ Each picture has the caption superimposed on top of it.}</string>
 								aUkBBJKEhIQM
 								TlNEaWN0aW9u
 								YXJ5AJSEAWkE
-								koSWlhBOU1Bh
-								cmFncmFwaFN0
-								eWxlhpKEhIQQ
-								TlNQYXJhZ3Jh
-								cGhTdHlsZQCU
-								hARDQ0BTAQCE
-								hIQHTlNBcnJh
-								eQCUmQyShISE
-								CU5TVGV4dFRh
-								YgCUhAJDZgAc
-								hpKEn54AOIaS
-								hJ+eAFSGkoSf
-								ngBwhpKEn54A
-								gYwAhpKEn54A
-								gagAhpKEn54A
-								gcQAhpKEn54A
-								geAAhpKEn54A
-								gfwAhpKEn54A
-								gRgBhpKEn54A
-								gTQBhpKEn54A
-								gVABhoaBAAiE
-								BFsxZl2DzcxM
-								PYaShJaWB05T
-								Q29sb3KGkoSE
-								hAdOU0NvbG9y
-								AJSEAWMDhAJm
-								ZgCDmpkZP4aS
-								hJaWBk5TRm9u
-								dIaShISEBk5T
-								Rm9udB6UmSSE
-								BVszNmNdBgAA
-								ABwAAAD//kgA
-								ZQBsAHYAZQB0
-								AGkAYwBhAE4A
-								ZQB1AGUAhAFm
-								DaEAoQGhAKEA
-								hpKElpYGTlNL
-								ZXJuhpKEhIQI
-								TlNOdW1iZXIA
-								hIQHTlNWYWx1
-								ZQCUhAEqhIQB
-								ZKkAhoaG
+								koSWlgZOU0tl
+								cm6GkoSEhAhO
+								U051bWJlcgCE
+								hAdOU1ZhbHVl
+								AJSEASqEhAFk
+								nQCGkoSWlhBO
+								U1BhcmFncmFw
+								aFN0eWxlhpKE
+								hIQQTlNQYXJh
+								Z3JhcGhTdHls
+								ZQCUhARDQ0BT
+								AQCEhIQHTlNB
+								cnJheQCUmQyS
+								hISECU5TVGV4
+								dFRhYgCUhAJD
+								ZgAchpKEpKIA
+								OIaShKSiAFSG
+								koSkogBwhpKE
+								pKIAgYwAhpKE
+								pKIAgagAhpKE
+								pKIAgcQAhpKE
+								pKIAgeAAhpKE
+								pKIAgfwAhpKE
+								pKIAgRgBhpKE
+								pKIAgTQBhpKE
+								pKIAgVABhoaB
+								AAiEBFsxZl2D
+								zcxMPYaShJaW
+								Bk5TRm9udIaS
+								hISEBk5TRm9u
+								dB6UmSSEBVsz
+								NmNdBgAAABwA
+								AAD//kgAZQBs
+								AHYAZQB0AGkA
+								YwBhAE4AZQB1
+								AGUAhAFmDYQB
+								YwCnAacApwCG
+								koSWlgdOU0Nv
+								bG9yhpKEhIQH
+								TlNDb2xvcgCU
+								pwOEAmZmAIOa
+								mRk/hoaG
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -5049,48 +5049,48 @@ Each picture has the caption superimposed on top of it.}</string>
 								hAJpSQEFkoSE
 								hAxOU0RpY3Rp
 								b25hcnkAlIQB
-								aQSShJaWEE5T
-								UGFyYWdyYXBo
-								U3R5bGWGkoSE
-								hBBOU1BhcmFn
-								cmFwaFN0eWxl
-								AJSEBENDQFMA
-								AISEhAdOU0Fy
-								cmF5AJSZDJKE
-								hIQJTlNUZXh0
-								VGFiAJSEAkNm
-								AByGkoSfngA4
-								hpKEn54AVIaS
-								hJ+eAHCGkoSf
-								ngCBjACGkoSf
-								ngCBqACGkoSf
-								ngCBxACGkoSf
-								ngCB4ACGkoSf
-								ngCB/ACGkoSf
-								ngCBGAGGkoSf
-								ngCBNAGGkoSf
-								ngCBUAGGhoEA
-								CIQEWzFmXYPN
-								zEw9hpKElpYH
-								TlNDb2xvcoaS
-								hISEB05TQ29s
-								b3IAlIQBYwOE
-								AmZmAIOamRk/
-								hpKElpYGTlNG
-								b250hpKEhIQG
-								TlNGb250HpSZ
-								JIQFWzM2Y10G
-								AAAAGgAAAP/+
-								TAB1AGMAaQBk
-								AGEARwByAGEA
-								bgBkAGUAAACE
-								AWYNoQChAaEA
-								oQCGkoSWlgZO
-								U0tlcm6GkoSE
-								hAhOU051bWJl
-								cgCEhAdOU1Zh
-								bHVlAJSEASqE
-								hAFkqQCGhoY=
+								aQSShJaWBk5T
+								S2VyboaShISE
+								CE5TTnVtYmVy
+								AISEB05TVmFs
+								dWUAlIQBKoSE
+								AWSdAIaShJaW
+								EE5TUGFyYWdy
+								YXBoU3R5bGWG
+								koSEhBBOU1Bh
+								cmFncmFwaFN0
+								eWxlAJSEBEND
+								QFMAAISEhAdO
+								U0FycmF5AJSZ
+								DJKEhIQJTlNU
+								ZXh0VGFiAJSE
+								AkNmAByGkoSk
+								ogA4hpKEpKIA
+								VIaShKSiAHCG
+								koSkogCBjACG
+								koSkogCBqACG
+								koSkogCBxACG
+								koSkogCB4ACG
+								koSkogCB/ACG
+								koSkogCBGAGG
+								koSkogCBNAGG
+								koSkogCBUAGG
+								hoEACIQEWzFm
+								XYPNzEw9hpKE
+								lpYGTlNGb250
+								hpKEhIQGTlNG
+								b250HpSZJIQF
+								WzM2Y10GAAAA
+								GgAAAP/+TAB1
+								AGMAaQBkAGEA
+								RwByAGEAbgBk
+								AGUAAACEAWYN
+								hAFjAKcBpwCn
+								AIaShJaWB05T
+								Q29sb3KGkoSE
+								hAdOU0NvbG9y
+								AJSnA4QCZmYA
+								g5qZGT+GhoY=
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -5307,50 +5307,50 @@ Each picture has the caption superimposed on top of it.}</string>
 								hoQCaUkBB5KE
 								hIQMTlNEaWN0
 								aW9uYXJ5AJSE
-								AWkEkoSWlhBO
-								U1BhcmFncmFw
-								aFN0eWxlhpKE
-								hIQQTlNQYXJh
-								Z3JhcGhTdHls
-								ZQCUhARDQ0BT
-								AgCEhIQHTlNB
-								cnJheQCUmQyS
-								hISECU5TVGV4
-								dFRhYgCUhAJD
-								ZgAchpKEn54A
-								OIaShJ+eAFSG
-								koSfngBwhpKE
-								n54AgYwAhpKE
-								n54AgagAhpKE
-								n54AgcQAhpKE
-								n54AgeAAhpKE
-								n54AgfwAhpKE
-								n54AgRgBhpKE
-								n54AgTQBhpKE
-								n54AgVABhoaB
-								AAiEBFsxZl2D
-								zcxMPYaShJaW
-								B05TQ29sb3KG
-								koSEhAdOU0Nv
-								bG9yAJSEAWMD
-								hAJmZgCDmpkZ
-								P4aShJaWBk5T
-								Rm9udIaShISE
-								Bk5TRm9udB6U
-								mTSEBVs1MmNd
-								BgAAACoAAAD/
-								/kgAZQBsAHYA
-								ZQB0AGkAYwBh
-								AE4AZQB1AGUA
-								LQBNAGUAZABp
-								AHUAbQAAAIQB
-								Zg2hAKEBoQCh
-								AIaShJaWBk5T
-								S2VyboaShISE
-								CE5TTnVtYmVy
-								AISEB05TVmFs
-								dWUAlIQBKoSE
-								AWSpAIaGhg==
+								AWkEkoSWlgZO
+								U0tlcm6GkoSE
+								hAhOU051bWJl
+								cgCEhAdOU1Zh
+								bHVlAJSEASqE
+								hAFknQCGkoSW
+								lhBOU1BhcmFn
+								cmFwaFN0eWxl
+								hpKEhIQQTlNQ
+								YXJhZ3JhcGhT
+								dHlsZQCUhARD
+								Q0BTAgCEhIQH
+								TlNBcnJheQCU
+								mQyShISECU5T
+								VGV4dFRhYgCU
+								hAJDZgAchpKE
+								pKIAOIaShKSi
+								AFSGkoSkogBw
+								hpKEpKIAgYwA
+								hpKEpKIAgagA
+								hpKEpKIAgcQA
+								hpKEpKIAgeAA
+								hpKEpKIAgfwA
+								hpKEpKIAgRgB
+								hpKEpKIAgTQB
+								hpKEpKIAgVAB
+								hoaBAAiEBFsx
+								Zl2DzcxMPYaS
+								hJaWBk5TRm9u
+								dIaShISEBk5T
+								Rm9udB6UmTSE
+								BVs1MmNdBgAA
+								ACoAAAD//kgA
+								ZQBsAHYAZQB0
+								AGkAYwBhAE4A
+								ZQB1AGUALQBN
+								AGUAZABpAHUA
+								bQAAAIQBZg2E
+								AWMApwGnAKcA
+								hpKElpYHTlND
+								b2xvcoaShISE
+								B05TQ29sb3IA
+								lKcDhAJmZgCD
+								mpkZP4aGhg==
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
@@ -5443,7 +5443,7 @@ Each picture has the caption superimposed on top of it.}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs38 \cf0 Its Popping!}</string>
+\f0\fs38 \cf0 10 checkins}</string>
 								<key>VerticalPad</key>
 								<integer>11</integer>
 							</dict>
@@ -5565,7 +5565,7 @@ Each picture has the caption superimposed on top of it.}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>ExpandedCanvases</key>
 		<array>
 			<dict>
@@ -5574,7 +5574,7 @@ Each picture has the caption superimposed on top of it.}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{109, 594}, {891, 774}}</string>
+		<string>{{273, 4}, {891, 774}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -5588,7 +5588,7 @@ Each picture has the caption superimposed on top of it.}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-90, 0}, {756, 635}}</string>
+		<string>{{-90, 19}, {756, 635}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
