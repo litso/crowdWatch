@@ -12,6 +12,7 @@
 #define FOURSQUARE_BASE_URL [NSURL URLWithString:@"https://api.foursquare.com/v2/"]
 #define FOURSQUARE_CLIENT_ID @"WQM5FIRZCEW11TWWPL04YEOPJBZHTTH0QM3GY1CG0EIQ5YX5"
 #define FOURSQUARE_CLIENT_SECRET @"3KAA23TODBEP02RUDSDLNRTXDSOIJ5AYTKVHVWMAQM3PXKMB"
+#define FOURSQUARE_TREND_RADIUS_IN_METERS 500
 
 @implementation ISFoursquareClient
 
@@ -44,6 +45,7 @@
     NSMutableDictionary *params =
     [NSMutableDictionary dictionaryWithDictionary:@{
                                                     @"ll":[NSString stringWithFormat:@"%0.2f,%0.2f",latitude,longitude],
+                                                    @"radius":@FOURSQUARE_TREND_RADIUS_IN_METERS,
                                                     @"client_id":FOURSQUARE_CLIENT_ID,
                                                     @"client_secret":FOURSQUARE_CLIENT_SECRET
                                                     }
