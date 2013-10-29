@@ -8,6 +8,7 @@
 
 #import "ISAppDelegate.h"
 #import "ISStubViewController.h"
+#import "InstagramMediaVC.h"
 
 @implementation ISAppDelegate
 
@@ -18,6 +19,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     ISStubViewController* vc = [[ISStubViewController alloc] init];
+    
     UINavigationController * nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nvc;
     

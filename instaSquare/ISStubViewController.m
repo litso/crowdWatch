@@ -14,8 +14,11 @@
 
 #define NORTH_SOUTH_SPAN 1000
 #define EAST_WEST_SPAN 500
+#import "InstagramMediaVC.h"
 
 @interface ISStubViewController ()
+
+@property (nonatomic, strong) NSArray *media;
 
 @end
 
@@ -38,6 +41,7 @@
                     andLongitude:2.294351
                      withSuccess:^(NSArray * images) {
             NSLog(@"Fetched Images");
+                         self.media = images;
         } failure:^(NSError * error) {
             NSLog(@"problems...");
         }];
@@ -72,6 +76,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem *searchButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
                                                                                  target:self
@@ -84,6 +89,8 @@
 //    UINib *venueAnnotationNib = [UINib nibWithNibName:@"VenueAnnotation" bundle:nil];
 //    [self.view registerNib:venueAnnotationNib forCellReuseIdentifier:@"VenueAnnotation"];
 
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Images" style:UIBarButtonItemStylePlain target:self action:@selector(onImagesButton)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -228,6 +235,12 @@
                                                     [alert show];
                                                 }
      ];
+}
+
+- (void)onImagesButton {
+    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithMedia:self.media];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

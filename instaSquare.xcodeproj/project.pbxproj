@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EF0079F181F5991000DF07F /* InstagramMediaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0079E181F5991000DF07F /* InstagramMediaVC.m */; };
+		7EF007A4181F59AC000DF07F /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF007A2181F59AC000DF07F /* MediaCell.m */; };
+		7EF007A5181F59AC000DF07F /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF007A3181F59AC000DF07F /* MediaCell.xib */; };
 		AF8DB99A180F822E00B2C0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB999180F822E00B2C0E1 /* Foundation.framework */; };
 		AF8DB99C180F822E00B2C0E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB99B180F822E00B2C0E1 /* CoreGraphics.framework */; };
 		AF8DB99E180F822E00B2C0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB99D180F822E00B2C0E1 /* UIKit.framework */; };
@@ -45,6 +48,11 @@
 /* Begin PBXFileReference section */
 		493E52921FAD4642AC0A209A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		502D007E40FA4670B7777D84 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF0079D181F5991000DF07F /* InstagramMediaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramMediaVC.h; sourceTree = "<group>"; };
+		7EF0079E181F5991000DF07F /* InstagramMediaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramMediaVC.m; sourceTree = "<group>"; };
+		7EF007A1181F59AC000DF07F /* MediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCell.h; sourceTree = "<group>"; };
+		7EF007A2181F59AC000DF07F /* MediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCell.m; sourceTree = "<group>"; };
+		7EF007A3181F59AC000DF07F /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
 		AF8DB996180F822E00B2C0E1 /* instaSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DB999180F822E00B2C0E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF8DB99B180F822E00B2C0E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,6 +114,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EF007A0181F5996000DF07F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EF007A1181F59AC000DF07F /* MediaCell.h */,
+				7EF007A2181F59AC000DF07F /* MediaCell.m */,
+				7EF007A3181F59AC000DF07F /* MediaCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		AF8DB98D180F822E00B2C0E1 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +161,7 @@
 		AF8DB99F180F822E00B2C0E1 /* instaSquare */ = {
 			isa = PBXGroup;
 			children = (
+				7EF007A0181F5996000DF07F /* Views */,
 				AF8DBA241814F00900B2C0E1 /* ViewControllers */,
 				AF8DBA1C1814DB9600B2C0E1 /* Managers */,
 				AF8DBA201814DCA400B2C0E1 /* Models */,
@@ -210,6 +229,8 @@
 		AF8DBA241814F00900B2C0E1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7EF0079D181F5991000DF07F /* InstagramMediaVC.h */,
+				7EF0079E181F5991000DF07F /* InstagramMediaVC.m */,
 				AF8DBA251814F0EF00B2C0E1 /* ISStubViewController.h */,
 				AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */,
 				AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */,
@@ -298,6 +319,7 @@
 			files = (
 				AF8DB9A4180F822E00B2C0E1 /* InfoPlist.strings in Resources */,
 				F8BC8654181E401300760B15 /* ISVenueAnnotationViewController.xib in Resources */,
+				7EF007A5181F59AC000DF07F /* MediaCell.xib in Resources */,
 				AF8DBA291814F0EF00B2C0E1 /* ISStubViewController.xib in Resources */,
 				AF8DB9AC180F822E00B2C0E1 /* Images.xcassets in Resources */,
 			);
@@ -353,9 +375,11 @@
 			files = (
 				AF8DBA1F1814DC0600B2C0E1 /* ISInstagramClient.m in Sources */,
 				AF8DBA281814F0EF00B2C0E1 /* ISStubViewController.m in Sources */,
+				7EF0079F181F5991000DF07F /* InstagramMediaVC.m in Sources */,
 				F8CC45681817B6E700E19FAF /* ISCheckin.m in Sources */,
 				F8393E5C181C84F20081DF62 /* ISMapPoint.m in Sources */,
 				AF8DB9AA180F822E00B2C0E1 /* ISAppDelegate.m in Sources */,
+				7EF007A4181F59AC000DF07F /* MediaCell.m in Sources */,
 				AF8DB9A6180F822E00B2C0E1 /* main.m in Sources */,
 				AF8DBA231814DD3200B2C0E1 /* ISImage.m in Sources */,
 				F8CC45651817B02F00E19FAF /* ISFoursquareClient.m in Sources */,

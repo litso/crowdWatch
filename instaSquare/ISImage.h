@@ -17,7 +17,7 @@
 @property (atomic, assign) double longitude;
 
 
-+ (NSArray*) imagesFromArray: (NSArray*) dictionaries;
++ (NSMutableArray*) imagesFromArray: (NSArray*) dictionaries;
 
 - (instancetype) initWithImageUrl: (NSString*) url;
 @end
