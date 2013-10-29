@@ -10,6 +10,6 @@
 
 @interface InstagramMediaVC : UITableViewController
 
-- (id)initWithMedia:(NSArray *) media;
+- (id)initWithLatitude:(float) latitude andLongitude:(float)longitude;
 
 @end
