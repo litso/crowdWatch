@@ -238,7 +238,7 @@
 }
 
 - (void)onImagesButton {
-    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithMedia:self.media];
+    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithLatitude:48.858844 andLongitude:2.294351];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

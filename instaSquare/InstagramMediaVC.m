@@ -14,7 +14,9 @@
 
 @interface InstagramMediaVC ()
 
-@property (nonatomic, strong) NSMutableArray *media;
+@property (nonatomic, strong) NSArray *media;
+@property (nonatomic, assign) CGFloat latitude;
+@property (nonatomic, assign) CGFloat longitude;
 
 @end
 
@@ -29,10 +31,12 @@
     return self;
 }
 
-- (id)initWithMedia:(NSMutableArray *) media
+- (id)initWithLatitude:(float)latitude andLongitude:(float)longitude
 {
     if (self) {
-        self.media = media;
+        self.latitude = latitude;
+        self.longitude = longitude;
+        [self getMedia];
     }
     return self;
 }
@@ -72,15 +76,28 @@
     MediaCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     ISImage *mediaObject = self.media[indexPath.row];
-    
+    cell.mediaImage.image = nil;
     [cell.mediaImage setImageWithURL: [NSURL URLWithString:mediaObject.url]];
 
     return cell;
 }
 
-- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 335;
+}
+
+- (void)getMedia {
     
-    return 335.0;
+    ISInstagramClient * client = [ISInstagramClient sharedClient];
+    [client imagesAtLatitude:self.latitude
+                andLongitude:self.longitude
+                 withSuccess:^(NSArray * images) {
+                     NSLog(@"Fetched Images");
+                     self.media = images;
+                     [self.tableView reloadData];
+                 } failure:^(NSError * error) {
+                     NSLog(@"problems...");
+                 }];
 }
 
 @end
