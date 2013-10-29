@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface ISStubViewController : UIViewController
+@interface ISStubViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) IBOutlet MKMapView *nearbyMap;
+@property (nonatomic, strong) IBOutlet UITextField *locationTextField;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+- (void)findLocation;
+- (void)foundLocation:(CLLocation *)loc;
+- (void)searchLocation;
+- (void)findTrendingNearBy:(CLLocation *)loc;
 
 @end

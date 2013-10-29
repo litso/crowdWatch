@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ISStubViewController">
             <connections>
+                <outlet property="activityIndicator" destination="02N-Yf-zn1" id="oiJ-DN-Tke"/>
+                <outlet property="locationTextField" destination="aKc-lr-blX" id="nVo-nH-SP4"/>
+                <outlet property="nearbyMap" destination="LMH-OF-nfe" id="WBf-YP-1ZR"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -13,7 +16,37 @@
         <view contentMode="scaleToFill" id="1">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.058253077899999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LMH-OF-nfe">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </mapView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-lr-blX">
+                    <rect key="frame" x="20" y="75" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="UOu-S8-ROq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="aAn-4F-ExH"/>
+                    </connections>
+                </textField>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="02N-Yf-zn1">
+                    <rect key="frame" x="142" y="124" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="aKc-lr-blX" firstAttribute="centerX" secondItem="LMH-OF-nfe" secondAttribute="centerX" id="1z1-3T-ZWt"/>
+                <constraint firstAttribute="trailing" secondItem="aKc-lr-blX" secondAttribute="trailing" constant="20" symbolic="YES" id="6qL-rP-Y46"/>
+                <constraint firstItem="LMH-OF-nfe" firstAttribute="top" secondItem="1" secondAttribute="top" id="WZA-yZ-Pov"/>
+                <constraint firstItem="aKc-lr-blX" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="eSu-0U-vLh"/>
+                <constraint firstItem="LMH-OF-nfe" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="fNo-DG-ctV"/>
+                <constraint firstItem="aKc-lr-blX" firstAttribute="top" secondItem="1" secondAttribute="top" constant="75" id="nOg-w3-opx"/>
+                <constraint firstAttribute="bottom" secondItem="LMH-OF-nfe" secondAttribute="bottom" id="sBa-VG-7x3"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
