@@ -26,7 +26,7 @@
     return self;
 }
 
-+ (NSArray*) imagesFromArray: (NSArray*) dictionaries
++ (NSMutableArray*) imagesFromArray: (NSArray*) dictionaries
 {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (NSDictionary *dictionary in dictionaries)
