@@ -35,40 +35,6 @@
         [self.locationManager setDelegate:self];
         [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
 //        [self.locationManager startUpdatingLocation]; //MKMapView takes care of this
-        
-        ISInstagramClient * client = [ISInstagramClient sharedClient];
-        [client imagesAtLatitude:48.858844
-                    andLongitude:2.294351
-                     withSuccess:^(NSArray * images) {
-            NSLog(@"Fetched Images");
-                         self.media = images;
-        } failure:^(NSError * error) {
-            NSLog(@"problems...");
-        }];
-//        [[ISFoursquareClient sharedFSClient] checkinsAtLatitude:37.786827
-//                                                 andLongitude:-122.404653
-//                                                  withSuccess:^(AFHTTPRequestOperation *operation, id response) {
-//                                                      NSLog(@"Fetched Trending Venues Nearby");
-//                                                      NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
-//                                                      NSLog(@"%@", checkins);
-//                                                      NSLog(@"%@", response);
-//                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
-//                                                                                                      message:@"Fetched Checkins"
-//                                                                                                     delegate:nil
-//                                                                                            cancelButtonTitle:nil
-//                                                                                            otherButtonTitles:nil];
-//                                                      [alert show];
-//                                                      [alert dismissWithClickedButtonIndex:0 animated:YES];
-//                                                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//                                                      NSLog(@"%@", error);
-//                                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-//                                                                                                      message:[error localizedDescription]
-//                                                                                                     delegate:nil
-//                                                                                            cancelButtonTitle:@"OK"
-//                                                                                            otherButtonTitles:nil];
-//                                                      [alert show];
-//                                                  }
-//         ];
     }
     return self;
 }
@@ -86,6 +52,7 @@
     [self.nearbyMap setDelegate:self]; // set the delegate in viewDidLoad instead of init
     [self.nearbyMap setShowsUserLocation:YES];
     
+// RMM: TODO Register a custom nib for the custom call out
 //    UINib *venueAnnotationNib = [UINib nibWithNibName:@"VenueAnnotation" bundle:nil];
 //    [self.view registerNib:venueAnnotationNib forCellReuseIdentifier:@"VenueAnnotation"];
 
@@ -112,7 +79,7 @@
     [self foundLocation:latestLocation];
 }
 
-#pragma MKMapView Delegate Methods
+#pragma mark - MKMapView Delegate Methods
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     NSLog(@"Map view updated location");
@@ -125,36 +92,50 @@
     [self findTrendingNearBy:latestLocation];
 }
 
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
-//    NSLog(@"mapView:viewForAnnotation:");
-//    if ([annotation isKindOfClass:[MKUserLocation class]])
-//    {
-//        return nil;
-//    }
-//    else if ([annotation isKindOfClass:[ISMapPoint class]]) // use whatever annotation class you used when creating the annotation
-//    {
-//        static NSString * const identifier = @"VenueAnnotation";
-//        
-//        MKAnnotationView* annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-//        
-//        if (annotationView)
-//        {
-//            annotationView.annotation = annotation;
-//        }
-//        else
-//        {
-//            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
-//                                                          reuseIdentifier:identifier];
-//        }
-//        annotationView.canShowCallout = NO;
-////        annotationView.image = [UIImage @"your-image-here.png"];
-//        
-//        return annotationView;
-//    }
-//    return nil;
-//}
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
+    NSLog(@"mapView:viewForAnnotation:");
+    // try to dequeue an existing pin view first
+    static NSString *BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
+    
+    MKPinAnnotationView *pinView =
+    (MKPinAnnotationView *) [self.nearbyMap dequeueReusableAnnotationViewWithIdentifier:BridgeAnnotationIdentifier];
+    if (pinView == nil)
+    {
+        // if an existing pin view was not available, create one
+        MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
+                                              initWithAnnotation:annotation reuseIdentifier:BridgeAnnotationIdentifier];
+        customPinView.pinColor = MKPinAnnotationColorPurple;
+        customPinView.animatesDrop = YES;
+        customPinView.canShowCallout = YES;
+        
+        // add a detail disclosure button to the callout which will open a new view controller page
+        //
+        // note: when the detail disclosure button is tapped, we respond to it via:
+        //       calloutAccessoryControlTapped delegate method
+        //
+        // by using "calloutAccessoryControlTapped", it's a convenient way to find out which annotation was tapped
+        //
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+        customPinView.rightCalloutAccessoryView = rightButton;
+        
+        return customPinView;
+    }
+    
+    return pinView;
+}
 
-#pragma UITextField Delegate Methods
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    // here we illustrate how to detect which annotation type was clicked on for its callout
+    ISMapPoint* annotation = (ISMapPoint*)[view annotation];
+
+    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithLatitude:annotation.coordinate.latitude andLongitude:annotation.coordinate.longitude];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - UITextField Delegate Methods
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     NSLog(@"Textfield returned");
@@ -163,7 +144,7 @@
     return YES;
 }
 
-#pragma View Controller Methods
+#pragma mark - View Controller Methods
 
 - (void)findLocation {
     NSLog(@"Find location");
@@ -215,7 +196,7 @@
                                                     NSLog(@"Fetched Trending Venues Nearby");
                                                     NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
                                                     [self displayTrendingVenues:checkins];
-                                                    //NSLog(@"%@", checkins);
+                                                    NSLog(@"%@", checkins);
                                                     //NSLog(@"%@", response);
                                                     //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
                                                     //message:@"Fetched Checkins"

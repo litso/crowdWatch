@@ -13,6 +13,7 @@
 @interface ISMapPoint : NSObject <MKAnnotation>
 
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)title;
 

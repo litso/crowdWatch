@@ -10,8 +10,6 @@
 
 @interface ISMapPoint ()
 
-@property (nonatomic) CLLocationCoordinate2D coordinate;
-
 @end
 
 @implementation ISMapPoint
