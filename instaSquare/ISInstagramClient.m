@@ -42,7 +42,8 @@ NSInteger kInstagramResponseOk = 200;
     [self getPath:@"media/search"
        parameters:@{@"client_id": @"ef7f664be3cc40c3b88d096fe7f1a25b",
                     @"lat": [NSString stringWithFormat: @"%f", latitude],
-                    @"lng": [NSString stringWithFormat: @"%f", longitude]
+                    @"lng": [NSString stringWithFormat: @"%f", longitude],
+                    @"distance": @"20.0"
                     }
           success:^(AFHTTPRequestOperation *operation, id json) {
               
