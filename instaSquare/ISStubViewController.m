@@ -11,6 +11,8 @@
 #import "ISFoursquareClient.h"
 #import "ISCheckin.h"
 #import "ISMapPoint.h"
+#import "UIImageView+AFNetworking.h"
+
 
 #define NORTH_SOUTH_SPAN 1000
 #define EAST_WEST_SPAN 500
@@ -95,34 +97,65 @@
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
     NSLog(@"mapView:viewForAnnotation:");
     // try to dequeue an existing pin view first
-    static NSString *BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
-    
-    MKPinAnnotationView *pinView =
-    (MKPinAnnotationView *) [self.nearbyMap dequeueReusableAnnotationViewWithIdentifier:BridgeAnnotationIdentifier];
-    if (pinView == nil)
+    static NSString *ISAnnotationIdentifier = @"instasquareAnnotationIdentifier";
+    ISMapPoint* mapPoint = (ISMapPoint*)annotation;
+
+    if (([annotation isKindOfClass:[ISMapPoint class]]) && mapPoint.checkin)
     {
-        // if an existing pin view was not available, create one
-        MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
-                                              initWithAnnotation:annotation reuseIdentifier:BridgeAnnotationIdentifier];
-        customPinView.pinColor = MKPinAnnotationColorPurple;
-        customPinView.animatesDrop = YES;
-        customPinView.canShowCallout = YES;
+        MKAnnotationView *reusedAnnotationView =
+        (MKAnnotationView *) [self.nearbyMap dequeueReusableAnnotationViewWithIdentifier:ISAnnotationIdentifier];
+        if (reusedAnnotationView == nil)
+        {
+            MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                                            reuseIdentifier:ISAnnotationIdentifier];
+            annotationView.canShowCallout = YES;
+            
+            
+            annotationView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [mapPoint.checkin smallImageUrl]]];
+            annotationView.opaque = NO;
+            
+            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+            annotationView.rightCalloutAccessoryView = rightButton;
+            
+            return annotationView;
+        }
+        else
+        {
+            reusedAnnotationView.annotation = annotation;
+            reusedAnnotationView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [mapPoint.checkin smallImageUrl]]];
+        }
         
-        // add a detail disclosure button to the callout which will open a new view controller page
-        //
-        // note: when the detail disclosure button is tapped, we respond to it via:
-        //       calloutAccessoryControlTapped delegate method
-        //
-        // by using "calloutAccessoryControlTapped", it's a convenient way to find out which annotation was tapped
-        //
-        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
-        customPinView.rightCalloutAccessoryView = rightButton;
+        return reusedAnnotationView;
+    }
+    else
+    {
+        // Show the current location as a purple pin for now
         
-        return customPinView;
+        // try to dequeue an existing pin view first
+        static NSString *CurrentLocationIdentifier = @"currentLocationIdentifier";
+        
+        MKPinAnnotationView *pinView =
+        (MKPinAnnotationView *) [self.nearbyMap dequeueReusableAnnotationViewWithIdentifier:CurrentLocationIdentifier];
+        if (pinView == nil)
+        {
+            // if an existing pin view was not available, create one
+            MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
+                                                  initWithAnnotation:annotation reuseIdentifier:CurrentLocationIdentifier];
+            customPinView.pinColor = MKPinAnnotationColorPurple;
+            customPinView.animatesDrop = YES;
+            customPinView.canShowCallout = NO;
+            
+            return customPinView;
+        }
+        else
+        {
+            pinView.annotation = annotation;
+        }
+        return pinView;
     }
     
-    return pinView;
+    return nil;
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -161,6 +194,8 @@
     // create annotation for coordinate
 //    ISMapPoint *mp = [[ISMapPoint alloc] initWithCoordinate:coordinate title:self.locationTextField.text];
     ISMapPoint *mp = [[ISMapPoint alloc] initWithCoordinate:coordinate title:@"Current Location"];
+
+    // Don't add current location as an annotation
     [self.nearbyMap addAnnotation:mp];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000);
     [self.nearbyMap setRegion:region animated:YES]; // zoom into the location
@@ -182,6 +217,7 @@
         CLLocation *loc = [[CLLocation alloc] initWithLatitude:checkin.venueLatitude.doubleValue longitude:checkin.venueLongitude.doubleValue];
         CLLocationCoordinate2D coordinate = [loc coordinate];
         ISMapPoint *mp = [[ISMapPoint alloc] initWithCoordinate:coordinate title:checkin.venueName];
+        mp.checkin = checkin;
         [self.nearbyMap addAnnotation:mp];
     }
 }
