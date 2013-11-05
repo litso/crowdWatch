@@ -7,6 +7,11 @@
 //
 
 #import "ISCheckin.h"
+#import "ISFoursquareCategoryManager.h"
+
+@interface ISCheckin()
+@property (nonatomic, strong) NSString* categoryId;
+@end
 
 @implementation ISCheckin
 
@@ -26,7 +31,8 @@
         checkin.venueCheckins = venueCheckins;
         checkin.venueLatitude = venueLatitude;
         checkin.venueLongitude = venueLongitude;
-
+        checkin.categoryId = [venue valueForKey:@"categories"][0][@"id"];
+        
 //        NSLog(@"%@", [checkin description]);
         
         [checkins addObject:checkin];
@@ -41,6 +47,12 @@
                                    self.venueLongitude,
                                    self.venueCheckins];
     return descriptionString;
+}
+
+- (NSURL*) smallImageUrl
+{
+    ISCategory* category = [[ISFoursquareCategoryManager sharedManager] categoryFromId:self.categoryId];    
+    return [category smallImageUrl];
 }
 
 @end

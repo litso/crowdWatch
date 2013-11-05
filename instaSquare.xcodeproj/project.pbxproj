@@ -26,6 +26,9 @@
 		AF8DBA231814DD3200B2C0E1 /* ISImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBA221814DD3200B2C0E1 /* ISImage.m */; };
 		AF8DBA281814F0EF00B2C0E1 /* ISStubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */; };
 		AF8DBA291814F0EF00B2C0E1 /* ISStubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */; };
+		AF9060AC1827170100588EAF /* fs_categories.json in Resources */ = {isa = PBXBuildFile; fileRef = AF9060AB1827170100588EAF /* fs_categories.json */; };
+		AF9060AF182717A500588EAF /* ISFoursquareCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9060AE182717A500588EAF /* ISFoursquareCategoryManager.m */; };
+		AF9060B21827192100588EAF /* ISCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9060B11827192100588EAF /* ISCategory.m */; };
 		B0D7827E76FD4FD9A1A23A0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 502D007E40FA4670B7777D84 /* libPods.a */; };
 		F8393E57181C44210081DF62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8393E56181C44210081DF62 /* CoreLocation.framework */; };
 		F8393E59181C78B00081DF62 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8393E58181C78B00081DF62 /* MapKit.framework */; };
@@ -76,6 +79,11 @@
 		AF8DBA251814F0EF00B2C0E1 /* ISStubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStubViewController.h; sourceTree = "<group>"; };
 		AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStubViewController.m; sourceTree = "<group>"; };
 		AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISStubViewController.xib; sourceTree = "<group>"; };
+		AF9060AB1827170100588EAF /* fs_categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fs_categories.json; sourceTree = "<group>"; };
+		AF9060AD182717A500588EAF /* ISFoursquareCategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFoursquareCategoryManager.h; sourceTree = "<group>"; };
+		AF9060AE182717A500588EAF /* ISFoursquareCategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFoursquareCategoryManager.m; sourceTree = "<group>"; };
+		AF9060B01827192100588EAF /* ISCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCategory.h; sourceTree = "<group>"; };
+		AF9060B11827192100588EAF /* ISCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCategory.m; sourceTree = "<group>"; };
 		F8393E56181C44210081DF62 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F8393E58181C78B00081DF62 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F8393E5A181C84F20081DF62 /* ISMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMapPoint.h; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 		AF8DB9A0180F822E00B2C0E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF9060AB1827170100588EAF /* fs_categories.json */,
 				AF8DB9A1180F822E00B2C0E1 /* instaSquare-Info.plist */,
 				AF8DB9A2180F822E00B2C0E1 /* InfoPlist.strings */,
 				AF8DB9A5180F822E00B2C0E1 /* main.m */,
@@ -211,6 +220,8 @@
 				AF8DBA1E1814DC0600B2C0E1 /* ISInstagramClient.m */,
 				F8CC45631817B02F00E19FAF /* ISFoursquareClient.h */,
 				F8CC45641817B02F00E19FAF /* ISFoursquareClient.m */,
+				AF9060AD182717A500588EAF /* ISFoursquareCategoryManager.h */,
+				AF9060AE182717A500588EAF /* ISFoursquareCategoryManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -222,6 +233,8 @@
 				AF8DBA221814DD3200B2C0E1 /* ISImage.m */,
 				F8CC45661817B6E700E19FAF /* ISCheckin.h */,
 				F8CC45671817B6E700E19FAF /* ISCheckin.m */,
+				AF9060B01827192100588EAF /* ISCategory.h */,
+				AF9060B11827192100588EAF /* ISCategory.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -317,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9060AC1827170100588EAF /* fs_categories.json in Resources */,
 				AF8DB9A4180F822E00B2C0E1 /* InfoPlist.strings in Resources */,
 				F8BC8654181E401300760B15 /* ISVenueAnnotationViewController.xib in Resources */,
 				7EF007A5181F59AC000DF07F /* MediaCell.xib in Resources */,
@@ -374,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8DBA1F1814DC0600B2C0E1 /* ISInstagramClient.m in Sources */,
+				AF9060AF182717A500588EAF /* ISFoursquareCategoryManager.m in Sources */,
 				AF8DBA281814F0EF00B2C0E1 /* ISStubViewController.m in Sources */,
 				7EF0079F181F5991000DF07F /* InstagramMediaVC.m in Sources */,
 				F8CC45681817B6E700E19FAF /* ISCheckin.m in Sources */,
@@ -381,6 +396,7 @@
 				AF8DB9AA180F822E00B2C0E1 /* ISAppDelegate.m in Sources */,
 				7EF007A4181F59AC000DF07F /* MediaCell.m in Sources */,
 				AF8DB9A6180F822E00B2C0E1 /* main.m in Sources */,
+				AF9060B21827192100588EAF /* ISCategory.m in Sources */,
 				AF8DBA231814DD3200B2C0E1 /* ISImage.m in Sources */,
 				F8CC45651817B02F00E19FAF /* ISFoursquareClient.m in Sources */,
 			);

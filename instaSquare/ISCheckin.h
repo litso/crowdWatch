@@ -17,5 +17,6 @@
 @property (nonatomic, strong) NSDecimalNumber *venueLongitude;
 
 + (NSMutableArray *)checkinsWithArray:(NSArray *)array;
-    
+
+- (NSURL*) smallImageUrl;
 @end
