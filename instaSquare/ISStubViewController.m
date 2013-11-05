@@ -37,7 +37,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.title = @"Insta Square";
+        self.title = @"CrowdWatch";
         
         self.locationManager = [[CLLocationManager alloc] init];
         [self.locationManager setDelegate:self];
@@ -64,9 +64,6 @@
 //    [searchView addSubview:searchTextField];
 //    
 //    self.navigationItem.titleView = searchView;
-    
-    // @jaaydenh: commenting this as we will segue to images from annotations
-    //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Images" style:UIBarButtonItemStylePlain target:self action:@selector(onImagesButton)];
     
     MKUserTrackingBarButtonItem *currentLocationButtonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.nearbyMap];
     self.navigationItem.leftBarButtonItem = currentLocationButtonItem; // need to know more about the callback of this button
@@ -192,8 +189,15 @@
     // here we illustrate how to detect which annotation type was clicked on for its callout
     ISMapPoint* annotation = (ISMapPoint*)[view annotation];
 
-    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithLatitude:annotation.coordinate.latitude andLongitude:annotation.coordinate.longitude];
+    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithLatitude:annotation.coordinate.latitude andLongitude:annotation.coordinate.longitude andTitle:annotation.title];
+
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle: @""
+                                   style: UIBarButtonItemStyleBordered
+                                   target: nil action: nil];
     
+    [self.navigationItem setBackBarButtonItem: backButton];
+
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -322,12 +326,6 @@
                                                     [alert show];
                                                 }
      ];
-}
-
-- (void)onImagesButton {
-    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithLatitude:48.858844 andLongitude:2.294351];
-    
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *mediaImage;
 
+@property (weak, nonatomic) IBOutlet UILabel *captionText;
+@property (weak, nonatomic) IBOutlet UILabel *dateCreated;
 @end

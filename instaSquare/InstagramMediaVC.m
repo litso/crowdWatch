@@ -26,16 +26,17 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"Instagram";
+        self.title = @"";
     }
     return self;
 }
 
-- (id)initWithLatitude:(float)latitude andLongitude:(float)longitude
+- (id)initWithLatitude:(float)latitude andLongitude:(float)longitude andTitle:(NSString*)title
 {
     if (self) {
         self.latitude = latitude;
         self.longitude = longitude;
+        self.title = title;
         [self getMedia];
     }
     return self;
@@ -78,12 +79,44 @@
     ISImage *mediaObject = self.media[indexPath.row];
     cell.mediaImage.image = nil;
     [cell.mediaImage setImageWithURL: [NSURL URLWithString:mediaObject.url]];
-
+    
+    cell.captionText.text = mediaObject.caption;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"eee MMM dd HH:mm:ss ZZZZ yyyy"];
+    NSTimeZone *gmt = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    [formatter setTimeZone:gmt];
+    
+    cell.dateCreated.text = [NSDateFormatter localizedStringFromDate:mediaObject.dateCreated
+                                                         dateStyle:NSDateFormatterShortStyle
+                                                         timeStyle:NSDateFormatterShortStyle];
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 335;
+
+    ISImage *mediaItem = self.media[indexPath.row];
+    CGFloat height = 0;
+    
+    if (mediaItem.caption != nil) {
+        UIFont *font = [UIFont systemFontOfSize:14.0f];
+        NSAttributedString *attributedText =
+        [[NSAttributedString alloc]
+         initWithString:mediaItem.caption
+         attributes:@
+         {
+         NSFontAttributeName: font
+         }];
+        
+        CGRect rect = [attributedText boundingRectWithSize:(CGSize){300.0, CGFLOAT_MAX}
+                                                   options:NSStringDrawingUsesLineFragmentOrigin
+                                                   context:nil];
+        CGSize size = rect.size;
+        height  = ceilf(size.height);
+    }
+    
+    return height + 365.0;
 }
 
 - (void)getMedia {
