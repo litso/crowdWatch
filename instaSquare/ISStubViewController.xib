@@ -20,9 +20,14 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LMH-OF-nfe">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="N2K-x1-RhR" appends="YES" id="RhY-wp-Ppa"/>
+                        <outletCollection property="gestureRecognizers" destination="KcL-01-rWb" appends="YES" id="fb9-Pg-kdQ"/>
+                    </connections>
                 </mapView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-lr-blX">
-                    <rect key="frame" x="20" y="75" width="280" height="30"/>
+                    <rect key="frame" x="20" y="70" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="UOu-S8-ROq"/>
@@ -44,11 +49,16 @@
                 <constraint firstItem="LMH-OF-nfe" firstAttribute="top" secondItem="1" secondAttribute="top" id="WZA-yZ-Pov"/>
                 <constraint firstItem="aKc-lr-blX" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="eSu-0U-vLh"/>
                 <constraint firstItem="LMH-OF-nfe" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="fNo-DG-ctV"/>
-                <constraint firstItem="aKc-lr-blX" firstAttribute="top" secondItem="1" secondAttribute="top" constant="75" id="nOg-w3-opx"/>
+                <constraint firstItem="aKc-lr-blX" firstAttribute="top" secondItem="1" secondAttribute="top" constant="70" id="nOg-w3-opx"/>
                 <constraint firstAttribute="bottom" secondItem="LMH-OF-nfe" secondAttribute="bottom" id="sBa-VG-7x3"/>
             </constraints>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <tapGestureRecognizer id="N2K-x1-RhR">
+            <connections>
+                <action selector="onTap:" destination="-1" id="e2I-2U-1Im"/>
+            </connections>
+        </tapGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="KcL-01-rWb"/>
     </objects>
 </document>

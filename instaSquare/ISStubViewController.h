@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface ISStubViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
+@interface ISStubViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) IBOutlet MKMapView *nearbyMap;
