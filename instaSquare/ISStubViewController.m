@@ -219,10 +219,10 @@
     [self.view endEditing:YES];
     // when user taps on map
     if (self.navigationController.navigationBarHidden) { // if the navigation bar is hidden, make it visible
-        [[self navigationController] setNavigationBarHidden:NO  animated:YES];
+        //[[self navigationController] setNavigationBarHidden:NO  animated:YES];
         //        [[UIApplication sharedApplication] setStatusBarHidden:NO]; // check this
     } else { // if the navigation bar is visible, make it hidden
-        [[self navigationController] setNavigationBarHidden:YES  animated:YES];
+        //[[self navigationController] setNavigationBarHidden:YES  animated:YES];
         //        [[UIApplication sharedApplication] setStatusBarHidden:YES]; // check this
     }
 }
