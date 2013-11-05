@@ -31,9 +31,16 @@
         checkin.venueCheckins = venueCheckins;
         checkin.venueLatitude = venueLatitude;
         checkin.venueLongitude = venueLongitude;
-        checkin.categoryId = [venue valueForKey:@"categories"][0][@"id"];
         
-//        NSLog(@"%@", [checkin description]);
+        NSArray* categoryArray = [venue valueForKey:@"categories"];
+        if (!categoryArray.count)
+        {
+            checkin.categoryId = @"4d4b7105d754a06375d81259";
+        }
+        else
+        {
+            checkin.categoryId = categoryArray[0][@"id"];
+        }
         
         [checkins addObject:checkin];
     }
