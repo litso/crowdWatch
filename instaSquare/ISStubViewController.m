@@ -284,6 +284,9 @@
                                                                       longitude:item.placemark.coordinate.longitude];
                  [self.activityIndicator startAnimating];
                  [self findTrendingNearBy:newLocation];
+                 
+                 MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([newLocation coordinate], NORTH_SOUTH_SPAN, EAST_WEST_SPAN);
+                 [self.nearbyMap setRegion:region animated:YES]; // zoom into the location
                  break;
              }
      }
