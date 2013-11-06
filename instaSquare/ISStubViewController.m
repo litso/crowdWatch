@@ -208,6 +208,7 @@
     NSLog(@"Text entered = %@", textField.text);
     //[self findLocation];
     [textField resignFirstResponder];
+    [self searchLocation];
     return YES;
 }
 
@@ -264,6 +265,7 @@
 
 // To search the location specified by the user in the search box
 - (void)searchLocation {
+    [self.view endEditing:YES]; // remove keyboard
     NSLog(@"Searching for location %@...", self.locationTextField.text);
     MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
     request.naturalLanguageQuery = self.locationTextField.text;
