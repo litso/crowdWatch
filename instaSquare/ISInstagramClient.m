@@ -43,12 +43,13 @@ NSInteger kInstagramResponseOk = 200;
        parameters:@{@"client_id": @"ef7f664be3cc40c3b88d096fe7f1a25b",
                     @"lat": [NSString stringWithFormat: @"%f", latitude],
                     @"lng": [NSString stringWithFormat: @"%f", longitude],
-                    @"distance": @"20.0"
+                    @"distance": @"8.0"
                     }
           success:^(AFHTTPRequestOperation *operation, id json) {
               
             if ([self responseCodeFromJson: json] == kInstagramResponseOk)
             {
+                NSLog(@"%@", json);
                 NSArray *rawImages = [json objectForKey:@"data"];
                 NSArray *images = [ISImage imagesFromArray: rawImages];
 
