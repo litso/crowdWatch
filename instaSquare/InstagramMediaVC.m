@@ -78,7 +78,8 @@
     
     ISImage *mediaObject = self.media[indexPath.row];
     cell.mediaImage.image = nil;
-    [cell.mediaImage setImageWithURL: [NSURL URLWithString:mediaObject.url]];
+    UIImage *placeholderImage = [UIImage imageNamed:@"placeholder.png"];
+    [cell.mediaImage setImageWithURL: [NSURL URLWithString:mediaObject.url] placeholderImage:placeholderImage];
     
     cell.captionText.text = mediaObject.caption;
     

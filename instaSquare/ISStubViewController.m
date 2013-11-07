@@ -68,6 +68,18 @@
     MKUserTrackingBarButtonItem *currentLocationButtonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.nearbyMap];
     self.navigationItem.leftBarButtonItem = currentLocationButtonItem; // need to know more about the callback of this button
     
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:121/255.0 blue:190/255.0 alpha:1.0];
+
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 0);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"AvenirNextCondensed-DemiBoldItalic" size:21.0], NSFontAttributeName, nil]];
+    
     [self.nearbyMap setDelegate:self]; // set the delegate in viewDidLoad instead of init
     [self.nearbyMap setShowsUserLocation:YES];
     [self.nearbyMap setRotateEnabled:NO];
