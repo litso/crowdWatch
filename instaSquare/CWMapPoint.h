@@ -1,6 +1,6 @@
 //
-//  ISMapPoint.h
-//  instaSquare
+//  CWMapPoint.h
+//  CrowdWatch
 //
 //  Created by Sairam Sankaran on 10/26/13.
 //  Copyright (c) 2013 Robert & Sairam. All rights reserved.
@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 #import "ISCheckin.h"
 
-@interface ISMapPoint : NSObject <MKAnnotation>
+@interface CWMapPoint : NSObject <MKAnnotation>
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic) CLLocationCoordinate2D coordinate;

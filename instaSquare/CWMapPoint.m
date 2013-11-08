@@ -1,18 +1,18 @@
 //
-//  ISMapPoint.m
-//  instaSquare
+//  CWMapPoint.m
+//  CrowdWatch
 //
 //  Created by Sairam Sankaran on 10/26/13.
 //  Copyright (c) 2013 Robert & Sairam. All rights reserved.
 //
 
-#import "ISMapPoint.h"
+#import "CWMapPoint.h"
 
-@interface ISMapPoint ()
+@interface CWMapPoint ()
 
 @end
 
-@implementation ISMapPoint
+@implementation CWMapPoint
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)title {
 

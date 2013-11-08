@@ -1,16 +1,16 @@
 //
-//  ISAppDelegate.m
-//  instaSquare
+//  CWAppDelegate.m
+//  CrowdWatch
 //
 //  Created by Robert Manson on 10/16/13.
 //  Copyright (c) 2013 Robert & Sairam. All rights reserved.
 //
 
-#import "ISAppDelegate.h"
-#import "ISStubViewController.h"
-#import "InstagramMediaVC.h"
+#import "CWAppDelegate.h"
+#import "CWViewController.h"
+#import "CWInstagramTableVC.h"
 
-@implementation ISAppDelegate
+@implementation CWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -18,7 +18,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    ISStubViewController* vc = [[ISStubViewController alloc] init];
+    CWViewController* vc = [[CWViewController alloc] init];
     
     UINavigationController * nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nvc;

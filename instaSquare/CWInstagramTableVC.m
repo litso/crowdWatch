@@ -1,18 +1,20 @@
 //
-//  InstagramMediaVC.m
-//  instaSquare
+//  CWInstagramTableVC.m
+//  CrowdWatch
 //
 //  Created by Jaayden on 10/28/13.
 //  Copyright (c) 2013 Robert & Sairam. All rights reserved.
 //
 
-#import "InstagramMediaVC.h"
-#import "MediaCell.h"
+#import "CWInstagramTableVC.h"
+#import "CWMediaCell.h"
 #import "ISInstagramClient.h"
 #import "ISImage.h"
 #import "UIImageView+AFNetworking.h"
 
-@interface InstagramMediaVC ()
+static NSString * const MediaCellIdentifier = @"PhotoCell";
+
+@interface CWInstagramTableVC ()
 
 @property (nonatomic, strong) NSArray *media;
 @property (nonatomic, assign) CGFloat latitude;
@@ -20,7 +22,7 @@
 
 @end
 
-@implementation InstagramMediaVC
+@implementation CWInstagramTableVC
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,8 +51,10 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    UINib *mediaNib = [UINib nibWithNibName:@"MediaCell" bundle:nil];
-    [self.tableView registerNib:mediaNib forCellReuseIdentifier:@"MediaCell"];
+    self.tableView.separatorColor = [UIColor clearColor];
+    
+    UINib *mediaNib = [UINib nibWithNibName:@"CWMediaCell" bundle:nil];
+    [self.tableView registerNib:mediaNib forCellReuseIdentifier:@"CWMediaCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,8 +77,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MediaCell";
-    MediaCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"CWMediaCell";
+    CWMediaCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     ISImage *mediaObject = self.media[indexPath.row];
     cell.mediaImage.image = nil;
