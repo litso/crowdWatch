@@ -1,6 +1,6 @@
 //
-//  ISStubViewController.h
-//  instaSquare
+//  CWViewController.h
+//  CrowdWatch
 //
 //  Created by Robert Manson on 10/20/13.
 //  Copyright (c) 2013 Robert & Sairam. All rights reserved.
@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface ISStubViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
+@interface CWViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) IBOutlet MKMapView *nearbyMap;

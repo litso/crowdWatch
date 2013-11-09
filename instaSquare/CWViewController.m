@@ -1,25 +1,26 @@
 //
-//  ISStubViewController.m
-//  instaSquare
+//  CWViewController.m
+//  CrowdWatch
 //
 //  Created by Robert Manson on 10/20/13.
 //  Copyright (c) 2013 Robert & Sairam. All rights reserved.
 //
 
-#import "ISStubViewController.h"
+#import "CWViewController.h"
 #import "ISInstagramClient.h"
 #import "ISFoursquareClient.h"
 #import "ISCheckin.h"
-#import "ISMapPoint.h"
+#import "CWMapPoint.h"
 #import "UIImageView+AFNetworking.h"
-#import "InstagramMediaVC.h"
+#import "CWInstagramTableVC.h"
+#import "CWInstagramCollectionVC.h"
 
 #define NORTH_SOUTH_SPAN 500
 #define EAST_WEST_SPAN 500
 #define SCROLL_UPDATE_DISTANCE 100
 
 
-@interface ISStubViewController ()
+@interface CWViewController ()
 
 @property (nonatomic, strong) NSArray *media;
 @property (nonatomic) CLLocationCoordinate2D lastUpdatedLocation;
@@ -30,7 +31,7 @@
 
 @end
 
-@implementation ISStubViewController
+@implementation CWViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -136,9 +137,9 @@
 //    NSLog(@"mapView:viewForAnnotation:");
     // try to dequeue an existing pin view first
     static NSString *ISAnnotationIdentifier = @"instasquareAnnotationIdentifier";
-    ISMapPoint* mapPoint = (ISMapPoint*)annotation;
+    CWMapPoint* mapPoint = (CWMapPoint*)annotation;
 
-    if (([annotation isKindOfClass:[ISMapPoint class]]) && mapPoint.checkin)
+    if (([annotation isKindOfClass:[CWMapPoint class]]) && mapPoint.checkin)
     {
         MKAnnotationView *reusedAnnotationView =
         (MKAnnotationView *) [self.nearbyMap dequeueReusableAnnotationViewWithIdentifier:ISAnnotationIdentifier];
@@ -199,9 +200,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     // here we illustrate how to detect which annotation type was clicked on for its callout
-    ISMapPoint* annotation = (ISMapPoint*)[view annotation];
-
-    InstagramMediaVC *vc = [[InstagramMediaVC alloc] initWithLatitude:annotation.coordinate.latitude andLongitude:annotation.coordinate.longitude andTitle:annotation.title];
+    CWMapPoint* annotation = (CWMapPoint*)[view annotation];
 
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
                                    initWithTitle: @""
@@ -209,8 +208,18 @@
                                    target: nil action: nil];
     
     [self.navigationItem setBackBarButtonItem: backButton];
-
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        CWInstagramCollectionVC *vc = [[CWInstagramCollectionVC alloc] initWithNibName:@"InstagramCollectionVC" bundle:nil];
+        
+        [vc initWithLatitude:annotation.coordinate.latitude andLongitude:annotation.coordinate.longitude andTitle:annotation.title];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        CWInstagramTableVC *vc = [[CWInstagramTableVC alloc] initWithLatitude:annotation.coordinate.latitude andLongitude:annotation.coordinate.longitude andTitle:annotation.title];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - UITextField Delegate Methods
@@ -269,7 +278,7 @@
     NSLog(@"Found location");
     CLLocationCoordinate2D coordinate = [loc coordinate];
     // create annotation for coordinate
-    ISMapPoint *mp = [[ISMapPoint alloc] initWithCoordinate:coordinate title:@"Current Location"];
+    CWMapPoint *mp = [[CWMapPoint alloc] initWithCoordinate:coordinate title:@"Current Location"];
 
     // Don't add current location as an annotation
     [self.nearbyMap addAnnotation:mp];
@@ -312,7 +321,7 @@
     for (ISCheckin *checkin in checkins) {
         CLLocation *loc = [[CLLocation alloc] initWithLatitude:checkin.venueLatitude.doubleValue longitude:checkin.venueLongitude.doubleValue];
         CLLocationCoordinate2D coordinate = [loc coordinate];
-        ISMapPoint *mp = [[ISMapPoint alloc] initWithCoordinate:coordinate title:checkin.venueName];
+        CWMapPoint *mp = [[CWMapPoint alloc] initWithCoordinate:coordinate title:checkin.venueName];
         mp.checkin = checkin;
         [self.nearbyMap addAnnotation:mp];
     }

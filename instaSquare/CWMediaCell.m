@@ -1,14 +1,14 @@
 //
-//  MediaCell.m
-//  instaSquare
+//  CWMediaCell.m
+//  CrowdWatch
 //
 //  Created by Jaayden on 10/28/13.
 //  Copyright (c) 2013 Robert & Sairam. All rights reserved.
 //
 
-#import "MediaCell.h"
+#import "CWMediaCell.h"
 
-@implementation MediaCell
+@implementation CWMediaCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

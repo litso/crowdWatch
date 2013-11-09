@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E13C5F2182A4DEC00725A87 /* CWMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E13C5F1182A4DEC00725A87 /* CWMediaCell.xib */; };
+		7E13C5F5182A534F00725A87 /* CWMediaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E13C5F4182A534F00725A87 /* CWMediaCollectionViewCell.m */; };
+		7E52FAA5182A2C6C00926005 /* CWInstagramCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E52FAA4182A2C6C00926005 /* CWInstagramCollectionVC.m */; };
+		7E52FAA9182A47DC00926005 /* CWInstagramCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E52FAA8182A47DC00926005 /* CWInstagramCollectionVC.xib */; };
 		7E7F24DB182A219700EB9217 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7F24DA182A219700EB9217 /* placeholder.png */; };
-		7EF0079F181F5991000DF07F /* InstagramMediaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0079E181F5991000DF07F /* InstagramMediaVC.m */; };
-		7EF007A4181F59AC000DF07F /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF007A2181F59AC000DF07F /* MediaCell.m */; };
-		7EF007A5181F59AC000DF07F /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF007A3181F59AC000DF07F /* MediaCell.xib */; };
+		7EF0079F181F5991000DF07F /* CWInstagramTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0079E181F5991000DF07F /* CWInstagramTableVC.m */; };
+		7EF007A4181F59AC000DF07F /* CWMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF007A2181F59AC000DF07F /* CWMediaCell.m */; };
 		AF8DB99A180F822E00B2C0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB999180F822E00B2C0E1 /* Foundation.framework */; };
 		AF8DB99C180F822E00B2C0E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB99B180F822E00B2C0E1 /* CoreGraphics.framework */; };
 		AF8DB99E180F822E00B2C0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB99D180F822E00B2C0E1 /* UIKit.framework */; };
 		AF8DB9A4180F822E00B2C0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8DB9A2180F822E00B2C0E1 /* InfoPlist.strings */; };
 		AF8DB9A6180F822E00B2C0E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB9A5180F822E00B2C0E1 /* main.m */; };
-		AF8DB9AA180F822E00B2C0E1 /* ISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB9A9180F822E00B2C0E1 /* ISAppDelegate.m */; };
+		AF8DB9AA180F822E00B2C0E1 /* CWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB9A9180F822E00B2C0E1 /* CWAppDelegate.m */; };
 		AF8DB9AC180F822E00B2C0E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8DB9AB180F822E00B2C0E1 /* Images.xcassets */; };
 		AF8DB9B3180F822E00B2C0E1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB9B2180F822E00B2C0E1 /* XCTest.framework */; };
 		AF8DB9B4180F822E00B2C0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB999180F822E00B2C0E1 /* Foundation.framework */; };
@@ -25,16 +28,16 @@
 		AF8DB9BF180F822E00B2C0E1 /* instaSquareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB9BE180F822E00B2C0E1 /* instaSquareTests.m */; };
 		AF8DBA1F1814DC0600B2C0E1 /* ISInstagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBA1E1814DC0600B2C0E1 /* ISInstagramClient.m */; };
 		AF8DBA231814DD3200B2C0E1 /* ISImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBA221814DD3200B2C0E1 /* ISImage.m */; };
-		AF8DBA281814F0EF00B2C0E1 /* ISStubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */; };
-		AF8DBA291814F0EF00B2C0E1 /* ISStubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */; };
+		AF8DBA281814F0EF00B2C0E1 /* CWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBA261814F0EF00B2C0E1 /* CWViewController.m */; };
+		AF8DBA291814F0EF00B2C0E1 /* CWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8DBA271814F0EF00B2C0E1 /* CWViewController.xib */; };
 		AF9060AC1827170100588EAF /* fs_categories.json in Resources */ = {isa = PBXBuildFile; fileRef = AF9060AB1827170100588EAF /* fs_categories.json */; };
 		AF9060AF182717A500588EAF /* ISFoursquareCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9060AE182717A500588EAF /* ISFoursquareCategoryManager.m */; };
 		AF9060B21827192100588EAF /* ISCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9060B11827192100588EAF /* ISCategory.m */; };
 		B0D7827E76FD4FD9A1A23A0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 502D007E40FA4670B7777D84 /* libPods.a */; };
 		F8393E57181C44210081DF62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8393E56181C44210081DF62 /* CoreLocation.framework */; };
 		F8393E59181C78B00081DF62 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8393E58181C78B00081DF62 /* MapKit.framework */; };
-		F8393E5C181C84F20081DF62 /* ISMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F8393E5B181C84F20081DF62 /* ISMapPoint.m */; };
-		F8BC8654181E401300760B15 /* ISVenueAnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BC8653181E401300760B15 /* ISVenueAnnotationViewController.xib */; };
+		F8393E5C181C84F20081DF62 /* CWMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F8393E5B181C84F20081DF62 /* CWMapPoint.m */; };
+		F8BC8654181E401300760B15 /* CWVenueAnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BC8653181E401300760B15 /* CWVenueAnnotationViewController.xib */; };
 		F8CC45651817B02F00E19FAF /* ISFoursquareClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC45641817B02F00E19FAF /* ISFoursquareClient.m */; };
 		F8CC45681817B6E700E19FAF /* ISCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CC45671817B6E700E19FAF /* ISCheckin.m */; };
 /* End PBXBuildFile section */
@@ -52,35 +55,40 @@
 /* Begin PBXFileReference section */
 		493E52921FAD4642AC0A209A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		502D007E40FA4670B7777D84 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E13C5F1182A4DEC00725A87 /* CWMediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWMediaCell.xib; sourceTree = "<group>"; };
+		7E13C5F3182A534F00725A87 /* CWMediaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMediaCollectionViewCell.h; sourceTree = "<group>"; };
+		7E13C5F4182A534F00725A87 /* CWMediaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMediaCollectionViewCell.m; sourceTree = "<group>"; };
+		7E52FAA3182A2C6C00926005 /* CWInstagramCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWInstagramCollectionVC.h; sourceTree = "<group>"; };
+		7E52FAA4182A2C6C00926005 /* CWInstagramCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWInstagramCollectionVC.m; sourceTree = "<group>"; };
+		7E52FAA8182A47DC00926005 /* CWInstagramCollectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWInstagramCollectionVC.xib; sourceTree = "<group>"; };
 		7E7F24DA182A219700EB9217 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
-		7EF0079D181F5991000DF07F /* InstagramMediaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramMediaVC.h; sourceTree = "<group>"; };
-		7EF0079E181F5991000DF07F /* InstagramMediaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramMediaVC.m; sourceTree = "<group>"; };
-		7EF007A1181F59AC000DF07F /* MediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCell.h; sourceTree = "<group>"; };
-		7EF007A2181F59AC000DF07F /* MediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCell.m; sourceTree = "<group>"; };
-		7EF007A3181F59AC000DF07F /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
-		AF8DB996180F822E00B2C0E1 /* instaSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF0079D181F5991000DF07F /* CWInstagramTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWInstagramTableVC.h; sourceTree = "<group>"; };
+		7EF0079E181F5991000DF07F /* CWInstagramTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWInstagramTableVC.m; sourceTree = "<group>"; };
+		7EF007A1181F59AC000DF07F /* CWMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMediaCell.h; sourceTree = "<group>"; };
+		7EF007A2181F59AC000DF07F /* CWMediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMediaCell.m; sourceTree = "<group>"; };
+		AF8DB996180F822E00B2C0E1 /* CrowdWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DB999180F822E00B2C0E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF8DB99B180F822E00B2C0E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AF8DB99D180F822E00B2C0E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		AF8DB9A1180F822E00B2C0E1 /* instaSquare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "instaSquare-Info.plist"; sourceTree = "<group>"; };
+		AF8DB9A1180F822E00B2C0E1 /* CrowdWatch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrowdWatch-Info.plist"; sourceTree = "<group>"; };
 		AF8DB9A3180F822E00B2C0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF8DB9A5180F822E00B2C0E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AF8DB9A7180F822E00B2C0E1 /* instaSquare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "instaSquare-Prefix.pch"; sourceTree = "<group>"; };
-		AF8DB9A8180F822E00B2C0E1 /* ISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISAppDelegate.h; sourceTree = "<group>"; };
-		AF8DB9A9180F822E00B2C0E1 /* ISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISAppDelegate.m; sourceTree = "<group>"; };
+		AF8DB9A7180F822E00B2C0E1 /* CrowdWatch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrowdWatch-Prefix.pch"; sourceTree = "<group>"; };
+		AF8DB9A8180F822E00B2C0E1 /* CWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWAppDelegate.h; sourceTree = "<group>"; };
+		AF8DB9A9180F822E00B2C0E1 /* CWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWAppDelegate.m; sourceTree = "<group>"; };
 		AF8DB9AB180F822E00B2C0E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AF8DB9B1180F822E00B2C0E1 /* instaSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8DB9B1180F822E00B2C0E1 /* CrowdWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DB9B2180F822E00B2C0E1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AF8DB9BA180F822E00B2C0E1 /* instaSquareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "instaSquareTests-Info.plist"; sourceTree = "<group>"; };
+		AF8DB9BA180F822E00B2C0E1 /* CrowdWatchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrowdWatchTests-Info.plist"; sourceTree = "<group>"; };
 		AF8DB9BC180F822E00B2C0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF8DB9BE180F822E00B2C0E1 /* instaSquareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = instaSquareTests.m; sourceTree = "<group>"; };
 		AF8DBA1D1814DC0600B2C0E1 /* ISInstagramClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISInstagramClient.h; sourceTree = "<group>"; };
 		AF8DBA1E1814DC0600B2C0E1 /* ISInstagramClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISInstagramClient.m; sourceTree = "<group>"; };
 		AF8DBA211814DD3200B2C0E1 /* ISImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISImage.h; sourceTree = "<group>"; };
 		AF8DBA221814DD3200B2C0E1 /* ISImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISImage.m; sourceTree = "<group>"; };
-		AF8DBA251814F0EF00B2C0E1 /* ISStubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISStubViewController.h; sourceTree = "<group>"; };
-		AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISStubViewController.m; sourceTree = "<group>"; };
-		AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISStubViewController.xib; sourceTree = "<group>"; };
+		AF8DBA251814F0EF00B2C0E1 /* CWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWViewController.h; sourceTree = "<group>"; };
+		AF8DBA261814F0EF00B2C0E1 /* CWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWViewController.m; sourceTree = "<group>"; };
+		AF8DBA271814F0EF00B2C0E1 /* CWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWViewController.xib; sourceTree = "<group>"; };
 		AF9060AB1827170100588EAF /* fs_categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fs_categories.json; sourceTree = "<group>"; };
 		AF9060AD182717A500588EAF /* ISFoursquareCategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFoursquareCategoryManager.h; sourceTree = "<group>"; };
 		AF9060AE182717A500588EAF /* ISFoursquareCategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFoursquareCategoryManager.m; sourceTree = "<group>"; };
@@ -88,9 +96,9 @@
 		AF9060B11827192100588EAF /* ISCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCategory.m; sourceTree = "<group>"; };
 		F8393E56181C44210081DF62 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F8393E58181C78B00081DF62 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F8393E5A181C84F20081DF62 /* ISMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMapPoint.h; sourceTree = "<group>"; };
-		F8393E5B181C84F20081DF62 /* ISMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMapPoint.m; sourceTree = "<group>"; };
-		F8BC8653181E401300760B15 /* ISVenueAnnotationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISVenueAnnotationViewController.xib; sourceTree = "<group>"; };
+		F8393E5A181C84F20081DF62 /* CWMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMapPoint.h; sourceTree = "<group>"; };
+		F8393E5B181C84F20081DF62 /* CWMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMapPoint.m; sourceTree = "<group>"; };
+		F8BC8653181E401300760B15 /* CWVenueAnnotationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWVenueAnnotationViewController.xib; sourceTree = "<group>"; };
 		F8CC45631817B02F00E19FAF /* ISFoursquareClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFoursquareClient.h; sourceTree = "<group>"; };
 		F8CC45641817B02F00E19FAF /* ISFoursquareClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFoursquareClient.m; sourceTree = "<group>"; };
 		F8CC45661817B6E700E19FAF /* ISCheckin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCheckin.h; sourceTree = "<group>"; };
@@ -127,9 +135,11 @@
 		7EF007A0181F5996000DF07F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7EF007A1181F59AC000DF07F /* MediaCell.h */,
-				7EF007A2181F59AC000DF07F /* MediaCell.m */,
-				7EF007A3181F59AC000DF07F /* MediaCell.xib */,
+				7EF007A1181F59AC000DF07F /* CWMediaCell.h */,
+				7EF007A2181F59AC000DF07F /* CWMediaCell.m */,
+				7E13C5F1182A4DEC00725A87 /* CWMediaCell.xib */,
+				7E13C5F3182A534F00725A87 /* CWMediaCollectionViewCell.h */,
+				7E13C5F4182A534F00725A87 /* CWMediaCollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -148,8 +158,8 @@
 		AF8DB997180F822E00B2C0E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF8DB996180F822E00B2C0E1 /* instaSquare.app */,
-				AF8DB9B1180F822E00B2C0E1 /* instaSquareTests.xctest */,
+				AF8DB996180F822E00B2C0E1 /* CrowdWatch.app */,
+				AF8DB9B1180F822E00B2C0E1 /* CrowdWatchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,10 +186,10 @@
 				AF8DBA241814F00900B2C0E1 /* ViewControllers */,
 				AF8DBA1C1814DB9600B2C0E1 /* Managers */,
 				AF8DBA201814DCA400B2C0E1 /* Models */,
-				AF8DB9A8180F822E00B2C0E1 /* ISAppDelegate.h */,
-				AF8DB9A9180F822E00B2C0E1 /* ISAppDelegate.m */,
-				F8393E5A181C84F20081DF62 /* ISMapPoint.h */,
-				F8393E5B181C84F20081DF62 /* ISMapPoint.m */,
+				AF8DB9A8180F822E00B2C0E1 /* CWAppDelegate.h */,
+				AF8DB9A9180F822E00B2C0E1 /* CWAppDelegate.m */,
+				F8393E5A181C84F20081DF62 /* CWMapPoint.h */,
+				F8393E5B181C84F20081DF62 /* CWMapPoint.m */,
 				AF8DB9AB180F822E00B2C0E1 /* Images.xcassets */,
 				AF8DB9A0180F822E00B2C0E1 /* Supporting Files */,
 			);
@@ -190,10 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				AF9060AB1827170100588EAF /* fs_categories.json */,
-				AF8DB9A1180F822E00B2C0E1 /* instaSquare-Info.plist */,
+				AF8DB9A1180F822E00B2C0E1 /* CrowdWatch-Info.plist */,
 				AF8DB9A2180F822E00B2C0E1 /* InfoPlist.strings */,
 				AF8DB9A5180F822E00B2C0E1 /* main.m */,
-				AF8DB9A7180F822E00B2C0E1 /* instaSquare-Prefix.pch */,
+				AF8DB9A7180F822E00B2C0E1 /* CrowdWatch-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -210,7 +220,7 @@
 		AF8DB9B9180F822E00B2C0E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF8DB9BA180F822E00B2C0E1 /* instaSquareTests-Info.plist */,
+				AF8DB9BA180F822E00B2C0E1 /* CrowdWatchTests-Info.plist */,
 				AF8DB9BB180F822E00B2C0E1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -245,12 +255,15 @@
 		AF8DBA241814F00900B2C0E1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7EF0079D181F5991000DF07F /* InstagramMediaVC.h */,
-				7EF0079E181F5991000DF07F /* InstagramMediaVC.m */,
-				AF8DBA251814F0EF00B2C0E1 /* ISStubViewController.h */,
-				AF8DBA261814F0EF00B2C0E1 /* ISStubViewController.m */,
-				AF8DBA271814F0EF00B2C0E1 /* ISStubViewController.xib */,
-				F8BC8653181E401300760B15 /* ISVenueAnnotationViewController.xib */,
+				7E52FAA3182A2C6C00926005 /* CWInstagramCollectionVC.h */,
+				7E52FAA4182A2C6C00926005 /* CWInstagramCollectionVC.m */,
+				7E52FAA8182A47DC00926005 /* CWInstagramCollectionVC.xib */,
+				7EF0079D181F5991000DF07F /* CWInstagramTableVC.h */,
+				7EF0079E181F5991000DF07F /* CWInstagramTableVC.m */,
+				AF8DBA251814F0EF00B2C0E1 /* CWViewController.h */,
+				AF8DBA261814F0EF00B2C0E1 /* CWViewController.m */,
+				AF8DBA271814F0EF00B2C0E1 /* CWViewController.xib */,
+				F8BC8653181E401300760B15 /* CWVenueAnnotationViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -258,9 +271,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF8DB995180F822E00B2C0E1 /* instaSquare */ = {
+		AF8DB995180F822E00B2C0E1 /* CrowdWatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF8DB9C2180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "instaSquare" */;
+			buildConfigurationList = AF8DB9C2180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "CrowdWatch" */;
 			buildPhases = (
 				28F1357E3E544927B24A7FB1 /* Check Pods Manifest.lock */,
 				AF8DB992180F822E00B2C0E1 /* Sources */,
@@ -272,14 +285,14 @@
 			);
 			dependencies = (
 			);
-			name = instaSquare;
+			name = CrowdWatch;
 			productName = instaSquare;
-			productReference = AF8DB996180F822E00B2C0E1 /* instaSquare.app */;
+			productReference = AF8DB996180F822E00B2C0E1 /* CrowdWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AF8DB9B0180F822E00B2C0E1 /* instaSquareTests */ = {
+		AF8DB9B0180F822E00B2C0E1 /* CrowdWatchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF8DB9C5180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "instaSquareTests" */;
+			buildConfigurationList = AF8DB9C5180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "CrowdWatchTests" */;
 			buildPhases = (
 				AF8DB9AD180F822E00B2C0E1 /* Sources */,
 				AF8DB9AE180F822E00B2C0E1 /* Frameworks */,
@@ -290,9 +303,9 @@
 			dependencies = (
 				AF8DB9B7180F822E00B2C0E1 /* PBXTargetDependency */,
 			);
-			name = instaSquareTests;
+			name = CrowdWatchTests;
 			productName = instaSquareTests;
-			productReference = AF8DB9B1180F822E00B2C0E1 /* instaSquareTests.xctest */;
+			productReference = AF8DB9B1180F822E00B2C0E1 /* CrowdWatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -310,7 +323,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AF8DB991180F822E00B2C0E1 /* Build configuration list for PBXProject "instaSquare" */;
+			buildConfigurationList = AF8DB991180F822E00B2C0E1 /* Build configuration list for PBXProject "CrowdWatch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -322,8 +335,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF8DB995180F822E00B2C0E1 /* instaSquare */,
-				AF8DB9B0180F822E00B2C0E1 /* instaSquareTests */,
+				AF8DB995180F822E00B2C0E1 /* CrowdWatch */,
+				AF8DB9B0180F822E00B2C0E1 /* CrowdWatchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -335,10 +348,11 @@
 			files = (
 				AF9060AC1827170100588EAF /* fs_categories.json in Resources */,
 				AF8DB9A4180F822E00B2C0E1 /* InfoPlist.strings in Resources */,
-				F8BC8654181E401300760B15 /* ISVenueAnnotationViewController.xib in Resources */,
-				7EF007A5181F59AC000DF07F /* MediaCell.xib in Resources */,
+				F8BC8654181E401300760B15 /* CWVenueAnnotationViewController.xib in Resources */,
+				7E52FAA9182A47DC00926005 /* CWInstagramCollectionVC.xib in Resources */,
 				7E7F24DB182A219700EB9217 /* placeholder.png in Resources */,
-				AF8DBA291814F0EF00B2C0E1 /* ISStubViewController.xib in Resources */,
+				AF8DBA291814F0EF00B2C0E1 /* CWViewController.xib in Resources */,
+				7E13C5F2182A4DEC00725A87 /* CWMediaCell.xib in Resources */,
 				AF8DB9AC180F822E00B2C0E1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,16 +407,18 @@
 			files = (
 				AF8DBA1F1814DC0600B2C0E1 /* ISInstagramClient.m in Sources */,
 				AF9060AF182717A500588EAF /* ISFoursquareCategoryManager.m in Sources */,
-				AF8DBA281814F0EF00B2C0E1 /* ISStubViewController.m in Sources */,
-				7EF0079F181F5991000DF07F /* InstagramMediaVC.m in Sources */,
+				AF8DBA281814F0EF00B2C0E1 /* CWViewController.m in Sources */,
+				7EF0079F181F5991000DF07F /* CWInstagramTableVC.m in Sources */,
+				7E52FAA5182A2C6C00926005 /* CWInstagramCollectionVC.m in Sources */,
 				F8CC45681817B6E700E19FAF /* ISCheckin.m in Sources */,
-				F8393E5C181C84F20081DF62 /* ISMapPoint.m in Sources */,
-				AF8DB9AA180F822E00B2C0E1 /* ISAppDelegate.m in Sources */,
-				7EF007A4181F59AC000DF07F /* MediaCell.m in Sources */,
+				F8393E5C181C84F20081DF62 /* CWMapPoint.m in Sources */,
+				AF8DB9AA180F822E00B2C0E1 /* CWAppDelegate.m in Sources */,
+				7EF007A4181F59AC000DF07F /* CWMediaCell.m in Sources */,
 				AF8DB9A6180F822E00B2C0E1 /* main.m in Sources */,
 				AF9060B21827192100588EAF /* ISCategory.m in Sources */,
 				AF8DBA231814DD3200B2C0E1 /* ISImage.m in Sources */,
 				F8CC45651817B02F00E19FAF /* ISFoursquareClient.m in Sources */,
+				7E13C5F5182A534F00725A87 /* CWMediaCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +435,7 @@
 /* Begin PBXTargetDependency section */
 		AF8DB9B7180F822E00B2C0E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF8DB995180F822E00B2C0E1 /* instaSquare */;
+			target = AF8DB995180F822E00B2C0E1 /* CrowdWatch */;
 			targetProxy = AF8DB9B6180F822E00B2C0E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -523,9 +539,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "instaSquare/instaSquare-Prefix.pch";
-				INFOPLIST_FILE = "instaSquare/instaSquare-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "instaSquare/CrowdWatch-Prefix.pch";
+				INFOPLIST_FILE = "instaSquare/CrowdWatch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = CrowdWatch;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -537,9 +555,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "instaSquare/instaSquare-Prefix.pch";
-				INFOPLIST_FILE = "instaSquare/instaSquare-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "instaSquare/CrowdWatch-Prefix.pch";
+				INFOPLIST_FILE = "instaSquare/CrowdWatch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = CrowdWatch;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -548,7 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/instaSquare.app/instaSquare";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrowdWatch.app/CrowdWatch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -560,8 +580,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "instaSquareTests/instaSquareTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "instaSquareTests/CrowdWatchTests-Info.plist";
+				PRODUCT_NAME = CrowdWatchTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -571,7 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/instaSquare.app/instaSquare";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrowdWatch.app/CrowdWatch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -579,8 +599,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "instaSquare/instaSquare-Prefix.pch";
-				INFOPLIST_FILE = "instaSquareTests/instaSquareTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "instaSquareTests/CrowdWatchTests-Info.plist";
+				PRODUCT_NAME = CrowdWatchTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -589,7 +609,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF8DB991180F822E00B2C0E1 /* Build configuration list for PBXProject "instaSquare" */ = {
+		AF8DB991180F822E00B2C0E1 /* Build configuration list for PBXProject "CrowdWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF8DB9C0180F822E00B2C0E1 /* Debug */,
@@ -598,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF8DB9C2180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "instaSquare" */ = {
+		AF8DB9C2180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "CrowdWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF8DB9C3180F822E00B2C0E1 /* Debug */,
@@ -607,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF8DB9C5180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "instaSquareTests" */ = {
+		AF8DB9C5180F822E00B2C0E1 /* Build configuration list for PBXNativeTarget "CrowdWatchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF8DB9C6180F822E00B2C0E1 /* Debug */,
