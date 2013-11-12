@@ -149,8 +149,14 @@
                                                                             reuseIdentifier:ISAnnotationIdentifier];
             annotationView.canShowCallout = YES;
             
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [mapPoint.checkin smallImageUrl]]];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    annotationView.image = image;
+                });
+            });
             
-            annotationView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [mapPoint.checkin smallImageUrl]]];
             annotationView.opaque = NO;
             
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
