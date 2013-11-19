@@ -136,9 +136,11 @@
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
 //    NSLog(@"mapView:viewForAnnotation:");
     // try to dequeue an existing pin view first
-    static NSString *ISAnnotationIdentifier = @"instasquareAnnotationIdentifier";
-    CWMapPoint* mapPoint = (CWMapPoint*)annotation;
 
+    
+    CWMapPoint* mapPoint = (CWMapPoint*)annotation;
+    NSString *ISAnnotationIdentifier =  [NSString stringWithFormat:@"%@",[mapPoint.checkin smallImageUrl]];
+    
     if (([annotation isKindOfClass:[CWMapPoint class]]) && mapPoint.checkin)
     {
         MKAnnotationView *reusedAnnotationView =
@@ -167,8 +169,17 @@
         }
         else
         {
-            reusedAnnotationView.annotation = annotation;
-            reusedAnnotationView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [mapPoint.checkin smallImageUrl]]];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                reusedAnnotationView.annotation = annotation;
+                
+                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [mapPoint.checkin smallImageUrl]]];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    reusedAnnotationView.image = image;
+                });
+            });
+            
+
         }
         
         return reusedAnnotationView;
@@ -323,7 +334,16 @@
 }
 
 - (void)displayTrendingVenues:(NSArray *)checkins {
-//    NSLog(@"%@", checkins);
+   // NSLog(@"%@", checkins);
+
+    
+    if ([self.nearbyMap annotations].count > 50) {
+//        for (id<MKAnnotation> annotation in self.nearbyMap.annotations) {
+            [self.nearbyMap removeAnnotations:self.nearbyMap.annotations];
+        NSLog(@"REMOVIG...");
+  //      }
+    }
+    
     for (ISCheckin *checkin in checkins) {
         CLLocation *loc = [[CLLocation alloc] initWithLatitude:checkin.venueLatitude.doubleValue longitude:checkin.venueLongitude.doubleValue];
         CLLocationCoordinate2D coordinate = [loc coordinate];
