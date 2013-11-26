@@ -62,4 +62,33 @@
      ];
 }
 
+- (void) topPicksAtLatitude:(float)latitude
+               andLongitude:(float)longitude
+                withSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success
+                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params =
+    [NSMutableDictionary dictionaryWithDictionary:@{
+                                                    @"ll":[NSString stringWithFormat:@"%0.2f,%0.2f",latitude,longitude],
+                                                    @"radius":@FOURSQUARE_TREND_RADIUS_IN_METERS,
+                                                    @"client_id":FOURSQUARE_CLIENT_ID,
+                                                    @"client_secret":FOURSQUARE_CLIENT_SECRET,
+                                                    @"section":@"topPicks",
+                                                    @"time":@"any",
+                                                    @"day":@"any"
+                                                    }
+     ];
+    [self getPath:@"venues/explore"
+       parameters:params
+          success:^(AFHTTPRequestOperation *operation, id response) {
+              //NSLog(@"TOP PICKS RESPONSE %@",response);
+              NSDictionary *responseDictionary = [response objectForKey:@"response"];
+              NSLog(@"TOP PICKS RESPONSE DICTIONARY %@",responseDictionary);
+              NSArray *venuesArray = [responseDictionary objectForKey:@"venues"];
+              success(operation, venuesArray);
+          }
+          failure:failure
+     ];
+}
+
+
 @end

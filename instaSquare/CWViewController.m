@@ -55,7 +55,7 @@
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem *searchButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
                                                                                  target:self
-                                                                                 action:@selector(searchLocation)];
+                                                                                 action:@selector(searchButtonCallback)];
     self.navigationItem.rightBarButtonItem = searchButtonItem;
 
 //    UIView *searchView=[[UIView alloc]initWithFrame:CGRectMake(1, 10, 200, 20)];
@@ -131,6 +131,7 @@
     [self.nearbyMap setShowsUserLocation:NO]; // tell the map view to stop trying to display the user's current location
     NSLog(@"nearbyMap show user location is off");
     [self findTrendingNearBy:latestLocation];
+    [self topPicksNearBy:latestLocation];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
@@ -190,7 +191,7 @@
         
         // try to dequeue an existing pin view first
         static NSString *CurrentLocationIdentifier = @"currentLocationIdentifier";
-        
+            
         MKPinAnnotationView *pinView =
         (MKPinAnnotationView *) [self.nearbyMap dequeueReusableAnnotationViewWithIdentifier:CurrentLocationIdentifier];
         if (pinView == nil)
@@ -237,6 +238,11 @@
         
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+- (void)mapView:(MKMapView *)mapView didChangeUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated {
+    NSLog(@"%d", mode);
+    NSLog(@"%hhd", animated);
 }
 
 #pragma mark - UITextField Delegate Methods
@@ -301,9 +307,31 @@
     [self.nearbyMap addAnnotation:mp];
 }
 
+- (void) searchButtonCallback {
+    if (!self.locationTextField.isFirstResponder) { // keyboard is not active. bring it up
+        [self.locationTextField becomeFirstResponder];
+        return; // do not perform search. wait for user to type something.
+    }
+    
+    if (self.locationTextField.isFirstResponder && (self.locationTextField.text.length > 0)) { // keyboard active and user has entered text. go search for it.
+        [self searchLocation];
+    }
+    
+    if (self.locationTextField.isFirstResponder && (self.locationTextField.text.length <= 0)) { // keyboard active but user has not entered text
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Specify location to search"
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil
+                              ];
+        [alert show];
+    }
+}
+
 // To search the location specified by the user in the search box
 - (void)searchLocation {
     [self.view endEditing:YES]; // remove keyboard
+    
     NSLog(@"Searching for location %@...", self.locationTextField.text);
     MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
     request.naturalLanguageQuery = self.locationTextField.text;
@@ -367,6 +395,29 @@
                                                     NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
 //                                                    NSLog(@"%@", checkins);
                                                     [self displayTrendingVenues:checkins];
+                                                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                                    NSLog(@"%@", error);
+                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                    message:[error localizedDescription]
+                                                                                                   delegate:nil
+                                                                                          cancelButtonTitle:@"OK"
+                                                                                          otherButtonTitles:nil
+                                                                          ];
+                                                    [alert show];
+                                                }
+     ];
+}
+
+- (void)topPicksNearBy:(CLLocation *)loc {
+    NSLog(@"Find top picks near by ...");
+    CLLocationCoordinate2D coordinate = [loc coordinate];
+    [[ISFoursquareClient sharedFSClient] topPicksAtLatitude:coordinate.latitude
+                                               andLongitude:coordinate.longitude
+                                                withSuccess:^(AFHTTPRequestOperation *operation, id response) {
+                                                    NSLog(@"Fetched top picks nearby");
+                                                    NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
+                                                    NSLog(@"TOP PICKS: %@", checkins);
+                                                    //[self displayTrendingVenues:checkins];
                                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                     NSLog(@"%@", error);
                                                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
