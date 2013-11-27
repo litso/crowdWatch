@@ -80,10 +80,13 @@
     [self getPath:@"venues/explore"
        parameters:params
           success:^(AFHTTPRequestOperation *operation, id response) {
-              //NSLog(@"TOP PICKS RESPONSE %@",response);
               NSDictionary *responseDictionary = [response objectForKey:@"response"];
-              NSLog(@"TOP PICKS RESPONSE DICTIONARY %@",responseDictionary);
-              NSArray *venuesArray = [responseDictionary objectForKey:@"venues"];
+              NSMutableArray *venuesArray = [[NSMutableArray alloc] init];
+              
+              for (NSDictionary *item in responseDictionary[@"groups"][0][@"items"])
+              {
+                  [venuesArray addObject: item[@"venue"]];
+              }
               success(operation, venuesArray);
           }
           failure:failure
