@@ -43,7 +43,6 @@
         self.locationManager = [[CLLocationManager alloc] init];
         [self.locationManager setDelegate:self];
         [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-//        [self.locationManager startUpdatingLocation]; //MKMapView takes care of this
     }
     return self;
 }
@@ -57,14 +56,6 @@
                                                                                  target:self
                                                                                  action:@selector(searchButtonCallback)];
     self.navigationItem.rightBarButtonItem = searchButtonItem;
-
-//    UIView *searchView=[[UIView alloc]initWithFrame:CGRectMake(1, 10, 200, 20)];
-//    [searchView setBackgroundColor:[UIColor yellowColor]];
-//    UITextField *searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
-//    [searchTextField setDelegate:self];
-//    [searchView addSubview:searchTextField];
-//    
-//    self.navigationItem.titleView = searchView;
     
     MKUserTrackingBarButtonItem *currentLocationButtonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.nearbyMap];
     self.navigationItem.leftBarButtonItem = currentLocationButtonItem; // need to know more about the callback of this button
@@ -84,12 +75,6 @@
     [self.nearbyMap setDelegate:self]; // set the delegate in viewDidLoad instead of init
     [self.nearbyMap setShowsUserLocation:YES];
     [self.nearbyMap setRotateEnabled:NO];
-//    [[UIApplication sharedApplication] setStatusBarHidden:NO]; // check this
-    
-// RMM: TODO Register a custom nib for the custom call out
-//    UINib *venueAnnotationNib = [UINib nibWithNibName:@"VenueAnnotation" bundle:nil];
-//    [self.view registerNib:venueAnnotationNib forCellReuseIdentifier:@"VenueAnnotation"];
-
 
     UIPanGestureRecognizer* panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didDragMap:)];
     [panGestureRecognizer setDelegate:self];
@@ -100,7 +85,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma CLLocation Manager Delegate Methods
@@ -135,10 +119,6 @@
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
-//    NSLog(@"mapView:viewForAnnotation:");
-    // try to dequeue an existing pin view first
-
-    
     CWMapPoint* mapPoint = (CWMapPoint*)annotation;
     NSString *ISAnnotationIdentifier =  [NSString stringWithFormat:@"%@",[mapPoint.checkin smallImageUrl]];
     
@@ -248,9 +228,6 @@
 #pragma mark - UITextField Delegate Methods
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"Textfield returned");
-    NSLog(@"Text entered = %@", textField.text);
-    //[self findLocation];
     [textField resignFirstResponder];
     [self searchLocation];
     return YES;
@@ -266,14 +243,6 @@
 
 - (IBAction)onTap:(id)sender {
     [self.view endEditing:YES];
-    // when user taps on map
-    if (self.navigationController.navigationBarHidden) { // if the navigation bar is hidden, make it visible
-        //[[self navigationController] setNavigationBarHidden:NO  animated:YES];
-        //        [[UIApplication sharedApplication] setStatusBarHidden:NO]; // check this
-    } else { // if the navigation bar is visible, make it hidden
-        //[[self navigationController] setNavigationBarHidden:YES  animated:YES];
-        //        [[UIApplication sharedApplication] setStatusBarHidden:YES]; // check this
-    }
 }
 
 - (void)didDragMap:(UIGestureRecognizer*)gestureRecognizer {
@@ -300,10 +269,9 @@
 - (void)foundLocation:(CLLocation *)loc {
     NSLog(@"Found location");
     CLLocationCoordinate2D coordinate = [loc coordinate];
-    // create annotation for coordinate
     CWMapPoint *mp = [[CWMapPoint alloc] initWithCoordinate:coordinate title:@"Current Location"];
 
-    // Don't add current location as an annotation
+    // TODO: Chaange pin type for location
     [self.nearbyMap addAnnotation:mp];
 }
 
@@ -342,9 +310,13 @@
     [search
      startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
          if (response.mapItems.count == 0)
+         {
              NSLog(@"No Matches");
+         }
          else
-             for (MKMapItem *item in response.mapItems) {
+         {
+             for (MKMapItem *item in response.mapItems)
+             {
                  NSLog(@"name = %@", item.name);
                  NSLog(@"center lat = %f", item.placemark.coordinate.latitude);
                  NSLog(@"center lng = %f", item.placemark.coordinate.longitude);
@@ -357,19 +329,16 @@
                  [self.nearbyMap setRegion:region animated:YES]; // zoom into the location
                  break;
              }
+         }
      }
      ];
 }
 
 - (void)displayTrendingVenues:(NSArray *)checkins {
-   // NSLog(@"%@", checkins);
-
     
-    if ([self.nearbyMap annotations].count > 50) {
-//        for (id<MKAnnotation> annotation in self.nearbyMap.annotations) {
+    if ([self.nearbyMap annotations].count > 50)
+    {
             [self.nearbyMap removeAnnotations:self.nearbyMap.annotations];
-        NSLog(@"REMOVIG...");
-  //      }
     }
     
     for (ISCheckin *checkin in checkins) {
@@ -393,7 +362,6 @@
                                                 withSuccess:^(AFHTTPRequestOperation *operation, id response) {
                                                     NSLog(@"Fetched trending venues nearby");
                                                     NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
-//                                                    NSLog(@"%@", checkins);
                                                     [self displayTrendingVenues:checkins];
                                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                     NSLog(@"%@", error);
@@ -416,8 +384,7 @@
                                                 withSuccess:^(AFHTTPRequestOperation *operation, id response) {
                                                     NSLog(@"Fetched top picks nearby");
                                                     NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
-                                                    NSLog(@"TOP PICKS: %@", checkins);
-                                                    //[self displayTrendingVenues:checkins];
+                                                    [self displayTrendingVenues:checkins];
                                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                     NSLog(@"%@", error);
                                                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
