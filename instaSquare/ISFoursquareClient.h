@@ -16,4 +16,9 @@
                 withSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success
                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (void) topPicksAtLatitude:(float)latitude
+               andLongitude:(float)longitude
+                withSuccess:(void (^)(AFHTTPRequestOperation *operation, id response))success
+                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 @end
