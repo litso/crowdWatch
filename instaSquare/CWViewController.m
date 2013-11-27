@@ -115,7 +115,6 @@
     [self.nearbyMap setShowsUserLocation:NO]; // tell the map view to stop trying to display the user's current location
     NSLog(@"nearbyMap show user location is off");
     [self findTrendingNearBy:latestLocation];
-    [self topPicksNearBy:latestLocation];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
@@ -363,6 +362,9 @@
                                                     NSLog(@"Fetched trending venues nearby");
                                                     NSMutableArray *checkins = [ISCheckin checkinsWithArray:response];
                                                     [self displayTrendingVenues:checkins];
+                                                    if (checkins.count < 10) {
+                                                        [self topPicksNearBy:loc];
+                                                    }
                                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                     NSLog(@"%@", error);
                                                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
