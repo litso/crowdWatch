@@ -1,4 +1,5 @@
 # Xcode
+instaSquare/CWSecrets.m
 .DS_Store
 build/
 *.pbxuser
@@ -18,3 +19,4 @@ DerivedData
 .idea/
 *.xccheckout
 Pods/
+

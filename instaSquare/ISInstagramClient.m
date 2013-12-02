@@ -9,6 +9,7 @@
 #import "ISInstagramClient.h"
 #import "AFNetworking.h"
 #import "ISImage.h"
+#import "CWSecrets.h"
 
 NSString *const kAPIErrorJsonKey = @"ISInstagramErrorJsonKey";
 NSString *const kAPIErrorDomain = @"ISInstagramAPIErrorDomain";
@@ -40,7 +41,7 @@ NSInteger kInstagramResponseOk = 200;
 - (void) imagesAtLatitude:(float) latitude andLongitude:(float) longitude withSuccess:(void (^)(NSArray*))success failure:(void (^)(NSError *))failure
 {
     [self getPath:@"media/search"
-       parameters:@{@"client_id": @"ef7f664be3cc40c3b88d096fe7f1a25b",
+       parameters:@{@"client_id": [CWSecrets instaGramClientId],
                     @"lat": [NSString stringWithFormat: @"%f", latitude],
                     @"lng": [NSString stringWithFormat: @"%f", longitude],
                     @"distance": @"8.0"

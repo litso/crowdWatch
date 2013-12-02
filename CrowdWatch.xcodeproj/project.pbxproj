@@ -14,6 +14,7 @@
 		7E7F24DB182A219700EB9217 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7F24DA182A219700EB9217 /* placeholder.png */; };
 		7EF0079F181F5991000DF07F /* CWInstagramTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0079E181F5991000DF07F /* CWInstagramTableVC.m */; };
 		7EF007A4181F59AC000DF07F /* CWMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF007A2181F59AC000DF07F /* CWMediaCell.m */; };
+		AF04C2C1184C2A8F00EE2251 /* CWSecrets.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04C2C0184C2A8F00EE2251 /* CWSecrets.m */; };
 		AF8DB99A180F822E00B2C0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB999180F822E00B2C0E1 /* Foundation.framework */; };
 		AF8DB99C180F822E00B2C0E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB99B180F822E00B2C0E1 /* CoreGraphics.framework */; };
 		AF8DB99E180F822E00B2C0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8DB99D180F822E00B2C0E1 /* UIKit.framework */; };
@@ -66,6 +67,8 @@
 		7EF0079E181F5991000DF07F /* CWInstagramTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWInstagramTableVC.m; sourceTree = "<group>"; };
 		7EF007A1181F59AC000DF07F /* CWMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMediaCell.h; sourceTree = "<group>"; };
 		7EF007A2181F59AC000DF07F /* CWMediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMediaCell.m; sourceTree = "<group>"; };
+		AF04C2BF184C2A8F00EE2251 /* CWSecrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSecrets.h; sourceTree = "<group>"; };
+		AF04C2C0184C2A8F00EE2251 /* CWSecrets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSecrets.m; sourceTree = "<group>"; };
 		AF8DB996180F822E00B2C0E1 /* CrowdWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DB999180F822E00B2C0E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF8DB99B180F822E00B2C0E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,6 +238,8 @@
 				F8CC45641817B02F00E19FAF /* ISFoursquareClient.m */,
 				AF9060AD182717A500588EAF /* ISFoursquareCategoryManager.h */,
 				AF9060AE182717A500588EAF /* ISFoursquareCategoryManager.m */,
+				AF04C2BF184C2A8F00EE2251 /* CWSecrets.h */,
+				AF04C2C0184C2A8F00EE2251 /* CWSecrets.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				AF9060B21827192100588EAF /* ISCategory.m in Sources */,
 				AF8DBA231814DD3200B2C0E1 /* ISImage.m in Sources */,
 				F8CC45651817B02F00E19FAF /* ISFoursquareClient.m in Sources */,
+				AF04C2C1184C2A8F00EE2251 /* CWSecrets.m in Sources */,
 				7E13C5F5182A534F00725A87 /* CWMediaCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
