@@ -46,7 +46,8 @@
                                                     @"ll":[NSString stringWithFormat:@"%0.2f,%0.2f",latitude,longitude],
                                                     @"radius":@FOURSQUARE_TREND_RADIUS_IN_METERS,
                                                     @"client_id":[CWSecrets fourSquareClientId],
-                                                    @"client_secret":[CWSecrets fourSquareClientSecret]
+                                                    @"client_secret":[CWSecrets fourSquareClientSecret],
+                                                    @"v":@"20131201"
                                                     }
      ];
     [self getPath:@"venues/trending"
@@ -73,7 +74,8 @@
                                                     @"client_secret":[CWSecrets fourSquareClientSecret],
                                                     @"section":@"topPicks",
                                                     @"time":@"any",
-                                                    @"day":@"any"
+                                                    @"day":@"any",
+                                                    @"v":@"20131201"
                                                     }
      ];
     [self getPath:@"venues/explore"
