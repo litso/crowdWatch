@@ -207,7 +207,7 @@
     [self.navigationItem setBackBarButtonItem: backButton];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        CWInstagramCollectionVC *vc = [[CWInstagramCollectionVC alloc] initWithNibName:@"InstagramCollectionVC" bundle:nil];
+        CWInstagramCollectionVC *vc = [[CWInstagramCollectionVC alloc] initWithNibName:@"CWInstagramCollectionVC" bundle:nil];
         
         [vc initWithLatitude:annotation.coordinate.latitude andLongitude:annotation.coordinate.longitude andTitle:annotation.title];
         
